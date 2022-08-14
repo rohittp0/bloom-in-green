@@ -58,7 +58,7 @@ module.exports = {
                     favicon: path.resolve(__dirname, "./public/favicon.ico"),
                     filename: `${page}.html`,
                     chunks: [page],
-                    title: "template",
+                    title: "Bloom In Green",
                     scriptLoading: "defer",
                     publicPath: "/"
                 })
