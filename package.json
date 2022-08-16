@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack server --config webpack.dev.js",
     "watch:scss": "sass --watch src/scss:public/css",
-    "build": "webpack --config webpack.prod.js && sass src/scss:public/css",
+    "build": "sass src/scss:public/css && webpack --config webpack.prod.js",
     "ci": "yarn install --prefer-offline --frozen-lockfile"
   },
   "author": "Rohit T P",
