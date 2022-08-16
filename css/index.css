@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "KonTikiJF Aloha";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/font/Kon-Tiki-Aloha-JF-Regular.eot?") format("eot"), url("/font/Kon-Tiki-Aloha-JF-Regular.woff2") format("woff2"), url("/font/Kon-Tiki-Aloha-JF-Regular.woff") format("woff"), url("/font/Kon-Tiki-Aloha-JF-Regular.ttf") format("truetype"), url("/font/Kon-Tiki-Aloha-JF-Regular.svg#KonTikiJF_Aloha") format("svg");
+}
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/font/sofiapro-light.eot?") format("eot"), url("/font/sofiapro-light.woff2") format("woff2"), url("/font/sofiapro-light.woff") format("woff"), url("/font/sofiapro-light.ttf") format("truetype"), url("/font/sofiapro-light.svg#Sofia_Pro") format("svg");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: normal normal normal 20px KonTikiJF Aloha;
+}
+
+.image-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.join .center-white {
+  text-align: center;
+  font: normal normal normal 50px/59px KonTikiJF Aloha, Sofia Pro, sans-serif;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  padding: 1em 10%;
+}
+.join .center-white::after {
+  display: block;
+  font: normal normal bold 26px/40px sans-serif;
+  letter-spacing: 0;
+  text-align: right;
+  content: "- Bloom in green";
+}
+.join .image-background {
+  filter: brightness(50%);
+}
+.join .join-form {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 20vh;
+}
+.join .join-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join .join-form #joinUsButton, .join .join-form #joinUsInput {
+  border: none;
+  border-radius: 10px 0 0 10px;
+  padding: 0.5rem;
+  width: min(40vw, 450px);
+  font: normal normal normal 20px Sofia Pro;
+  letter-spacing: 0;
+}
+.join .join-form #joinUsButton {
+  border-radius: 0 10px 10px 0;
+  background: #1D4638;
+  width: auto;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
