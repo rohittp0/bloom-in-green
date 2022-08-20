@@ -56,6 +56,6 @@ module.exports = {
                     publicPath: "/"
                 })
         ),
-        new MiniCssExtractPlugin({filename: "styles.[hash].css"}),
+        new MiniCssExtractPlugin({filename: "styles.[contenthash].css"}),
     ]
 };
