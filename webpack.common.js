@@ -48,7 +48,7 @@ module.exports = {
                 new HtmlWebpackPlugin({
                     inject: true,
                     template: path.resolve(__dirname, `./src/templates/${page}.html`),
-                    favicon: path.resolve(__dirname, "./public/favicon.ico"),
+                    favicon: path.resolve(__dirname, "./public/favicon/favicon.ico"),
                     filename: `${page}.html`,
                     chunks: [page],
                     title: "Bloom In Green",
