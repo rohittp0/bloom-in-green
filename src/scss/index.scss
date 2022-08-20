@@ -160,3 +160,68 @@ body {
     }
   }
 }
+
+.hero {
+  padding: 1em 0;
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font: normal normal normal 35px/116px KonTikiJF Aloha;
+      text-transform: capitalize;
+    }
+
+    img {
+      width: 11rem;
+    }
+
+    button {
+      font: normal normal normal 30px/36px KonTikiJF Aloha;
+      text-transform: capitalize;
+      background-color: #3CB189;
+      border-radius: 29px;
+      border: none;
+      color: #FFFFFF;
+      padding: 0.4rem 1.3rem;
+
+    }
+  }
+
+  .video-row{
+    display: flex;
+    justify-content: end;
+    margin: 5em 5em 3em 10em;
+
+    button {
+      border-radius: 50%;
+      width: 114px;
+      height: 114px;
+      background-color: #2C5C4C;
+      border: 8px solid #BCCD81;
+      color: #FFFFFF;
+      font: normal normal normal 30px/31px KonTikiJF Aloha;
+      cursor: pointer;
+    }
+  }
+
+  .content-row{
+    margin-left: 5em;
+    margin-top: 1rem;
+    margin-bottom: 5em;
+
+    h1 {
+      color: #FFFFFF;
+      font: normal normal normal 70px/93px KonTikiJF Aloha;
+    }
+
+    h2 {
+      color: #FFFFFF;
+
+    }
+  }
+
+}
