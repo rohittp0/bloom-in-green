@@ -1,14 +1,1 @@
-@font-face {
-  font-family: "KonTikiJF Aloha";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/font/Kon-Tiki-Aloha-JF-Regular.eot?") format("eot"), url("/font/Kon-Tiki-Aloha-JF-Regular.woff2") format("woff2"), url("/font/Kon-Tiki-Aloha-JF-Regular.woff") format("woff"), url("/font/Kon-Tiki-Aloha-JF-Regular.ttf") format("truetype"), url("/font/Kon-Tiki-Aloha-JF-Regular.svg#KonTikiJF_Aloha") format("svg");
-}
-@font-face {
-  font-family: "Sofia Pro";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/font/sofiapro-light.eot?") format("eot"), url("/font/sofiapro-light.woff2") format("woff2"), url("/font/sofiapro-light.woff") format("woff"), url("/font/sofiapro-light.ttf") format("truetype"), url("/font/sofiapro-light.svg#Sofia_Pro") format("svg");
-}
-
-/*# sourceMappingURL=fonts.css.map */
+@font-face{font-family:"KonTikiJF Aloha";font-style:normal;font-weight:normal;src:url("/font/Kon-Tiki-Aloha-JF-Regular.eot?") format("eot"),url("/font/Kon-Tiki-Aloha-JF-Regular.woff2") format("woff2"),url("/font/Kon-Tiki-Aloha-JF-Regular.woff") format("woff"),url("/font/Kon-Tiki-Aloha-JF-Regular.ttf") format("truetype"),url("/font/Kon-Tiki-Aloha-JF-Regular.svg#KonTikiJF_Aloha") format("svg");font-display:swap}@font-face{font-family:"Sofia Pro";font-style:normal;font-weight:normal;src:url("/font/sofiapro-light.eot?") format("eot"),url("/font/sofiapro-light.woff2") format("woff2"),url("/font/sofiapro-light.woff") format("woff"),url("/font/sofiapro-light.ttf") format("truetype"),url("/font/sofiapro-light.svg#Sofia_Pro") format("svg");font-display:swap}/*# sourceMappingURL=fonts.css.map */
