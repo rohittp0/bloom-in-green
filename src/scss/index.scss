@@ -20,9 +20,292 @@ body {
   object-fit: cover;
 }
 
+section {
+  height: 100vh;
+}
+
+.hero {
+  padding: 1em 0;
+  position: relative;
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font: normal normal normal 35px/116px KonTikiJF Aloha;
+      text-transform: capitalize;
+    }
+
+    img {
+      width: 11rem;
+    }
+
+    button {
+      font: normal normal normal 30px/36px KonTikiJF Aloha;
+      text-transform: capitalize;
+      background-color: #3CB189;
+      border-radius: 29px;
+      border: none;
+      color: #FFFFFF;
+      padding: 0.4rem 1.3rem;
+
+    }
+  }
+
+  .video-row {
+    display: flex;
+    justify-content: end;
+    margin: 5em 5em 3em 10em;
+
+    button {
+      border-radius: 50%;
+      width: 114px;
+      height: 114px;
+      background-color: #2C5C4C;
+      border: 8px solid #BCCD81;
+      color: #FFFFFF;
+      font: normal normal normal 30px/31px KonTikiJF Aloha;
+      cursor: pointer;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: translateY(-10px) scale(1.1);
+        border-width: 5px;
+      }
+
+      &:focus {
+        transform: scale(0.001);
+
+
+      }
+    }
+  }
+
+  .content-row {
+    margin-left: 5em;
+    margin-top: 1rem;
+    margin-bottom: 5em;
+
+    h1 {
+      color: #FFFFFF;
+      font: normal normal normal 70px/93px KonTikiJF Aloha;
+    }
+
+    h2 {
+      color: #FFFFFF;
+
+    }
+  }
+
+}
+
+.vision {
+  position: relative;
+
+  .vision-left {
+    padding-top: 15rem;
+    padding-left: 10rem;
+
+    h2 {
+      font: normal normal normal 55px/110px KonTikiJF Aloha;
+    }
+
+    h4 {
+      font: normal normal normal 20px/29px Sofia Pro;
+      color: #648673;
+      padding-bottom: 10rem;
+      font-weight: bold;
+    }
+
+    button {
+      width: 200px;
+      height: 62px;
+      font: normal normal normal 30px/36px KonTikiJF Aloha;
+      text-transform: lowercase;
+      background-color: #3CB189;
+      border: none;
+      color: #FFFFFF;
+      padding: 0.4rem 1.3rem;
+      border-radius: 8px;
+      box-shadow: 6px 5px 34px #00000045;
+      margin-bottom: 10rem;
+
+    }
+  }
+}
+
+.newsroom {
+  background: #e6fff6;
+  padding: 4em;
+
+  .title {
+    margin: 3em 2em;
+
+    p, h2 {
+      margin: 0.5em 0;
+      font: normal normal normal 54px/70px KonTikiJF Aloha;
+      color: #1D4638;
+      text-align: right;
+    }
+
+    p {
+      font: normal normal normal 25px/30px Sofia Pro;
+      letter-spacing: 0;
+      color: #1D4638;
+      opacity: 1;
+      font-weight: bold;
+    }
+  }
+
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel {
+    position: relative;
+    perspective: 100px;
+
+    *::-webkit-scrollbar {
+      width: 0;
+    }
+
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: none;
+    }
+  }
+
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item;
+  }
+
+  .carousel__slide:nth-child(even) {
+    background-color: #99f;
+  }
+
+  .carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 70px);
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    scroll-snap-align: center;
+  }
+
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+
+  .carousel::before,
+  .carousel__prev {
+    left: -1rem;
+  }
+
+  .carousel::after,
+  .carousel__next {
+    right: -1rem;
+  }
+
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
+
+  .carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
+
+}
+
 .join {
 
   position: relative;
+  height: unset;
   min-height: 600px;
 
   .center-white {
@@ -82,7 +365,7 @@ body {
 }
 
 .footer {
-  width: calc(100% - 8rem);
+  height: unset;
   background-color: black;
   color: white;
   text-align: center;
@@ -161,67 +444,47 @@ body {
   }
 }
 
-.hero {
-  padding: 1em 0;
-
-  .nav-menu {
-    display: flex;
-    justify-content: space-around;
-
-    a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font: normal normal normal 35px/116px KonTikiJF Aloha;
-      text-transform: capitalize;
-    }
-
-    img {
-      width: 11rem;
-    }
-
-    button {
-      font: normal normal normal 30px/36px KonTikiJF Aloha;
-      text-transform: capitalize;
-      background-color: #3CB189;
-      border-radius: 29px;
-      border: none;
-      color: #FFFFFF;
-      padding: 0.4rem 1.3rem;
-
-    }
+@keyframes tonext {
+  75% {
+    left: 0;
   }
-
-  .video-row{
-    display: flex;
-    justify-content: end;
-    margin: 5em 5em 3em 10em;
-
-    button {
-      border-radius: 50%;
-      width: 114px;
-      height: 114px;
-      background-color: #2C5C4C;
-      border: 8px solid #BCCD81;
-      color: #FFFFFF;
-      font: normal normal normal 30px/31px KonTikiJF Aloha;
-      cursor: pointer;
-    }
+  95% {
+    left: 100%;
   }
-
-  .content-row{
-    margin-left: 5em;
-    margin-top: 1rem;
-    margin-bottom: 5em;
-
-    h1 {
-      color: #FFFFFF;
-      font: normal normal normal 70px/93px KonTikiJF Aloha;
-    }
-
-    h2 {
-      color: #FFFFFF;
-
-    }
+  98% {
+    left: 100%;
   }
+  99% {
+    left: 0;
+  }
+}
 
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
 }
