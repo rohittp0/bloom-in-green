@@ -1,0 +1,80 @@
+.newsroom {
+  background: #e6fff6;
+  padding: 4em;
+
+  .title {
+    margin: 3em 2em;
+
+    p, h2 {
+      margin: 0.5em 0;
+      font: normal normal normal 54px/70px KonTikiJF Aloha;
+      color: #1D4638;
+      text-align: right;
+    }
+
+    p {
+      font: normal normal normal 25px/30px Sofia Pro;
+      letter-spacing: 0;
+      color: #1D4638;
+      opacity: 1;
+      font-weight: bold;
+    }
+
+  }
+
+  .news-arrow {
+    background-color: white;
+    padding: 4em 0.2em;
+    box-shadow: 5px 8px 43px #00000029;
+  }
+
+  .carousal-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .carousal-content {
+    position: relative;
+    padding-bottom: 1em;
+
+    .news-card {
+      position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+      width: 20vw;
+      height: 47vh;
+
+      img {
+        width: 20vw;
+        aspect-ratio: 2;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+      }
+
+      h4 {
+        font: normal normal normal 21px/21px KonTikiJF Aloha;
+        padding: 0.9em 0.3em 0.4em;
+      }
+
+      button {
+        background-color: #1D4638;
+        font: normal normal medium 15px/76px Sofia Pro;
+        color: white;
+        border-radius: 2em;
+        padding: 0.5em;
+        margin-left: 0.5em;
+        width: 7em;
+      }
+
+      p {
+        font: normal normal normal 10px/15px Sofia Pro;
+        padding-top: 1em;
+        padding-bottom: 1.4em;
+        padding-left: 1em;
+
+      }
+    }
+  }
+}
