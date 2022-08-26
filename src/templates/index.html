@@ -33,6 +33,10 @@
     <link rel="preload" href="/font/Kon-Tiki-Aloha-JF-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/font/sofiapro-light.woff2" as="font" type="font/woff2" crossorigin>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/themes/splide-sea-green.min.css">
+
     <link rel="stylesheet" href="/css/index.css">
     <title>Bloom In Green</title>
 
@@ -99,46 +103,11 @@
             commodo consequat. Duis aute irure dolor in reprehenderit.</p>
     </div>
 
-    <div class="carousel" aria-label="Gallery">
-        <ol class="carousel__viewport">
-            <li id="carousel__slide1"
-                tabindex="0"
-                class="carousel__slide">
-                <div class="carousel__snapper">
-                    <a href="#carousel__slide4"
-                       class="carousel__prev">Go to last slide</a>
-                    <a href="#carousel__slide2"
-                       class="carousel__next">Go to next slide</a>
-                </div>
-            </li>
-            <li id="carousel__slide2"
-                tabindex="0"
-                class="carousel__slide">
-                <div class="carousel__snapper"></div>
-                <a href="#carousel__slide1"
-                   class="carousel__prev">Go to previous slide</a>
-                <a href="#carousel__slide3"
-                   class="carousel__next">Go to next slide</a>
-            </li>
-            <li id="carousel__slide3"
-                tabindex="0"
-                class="carousel__slide">
-                <div class="carousel__snapper"></div>
-                <a href="#carousel__slide2"
-                   class="carousel__prev">Go to previous slide</a>
-                <a href="#carousel__slide4"
-                   class="carousel__next">Go to next slide</a>
-            </li>
-            <li id="carousel__slide4"
-                tabindex="0"
-                class="carousel__slide">
-                <div class="carousel__snapper"></div>
-                <a href="#carousel__slide3"
-                   class="carousel__prev">Go to previous slide</a>
-                <a href="#carousel__slide1"
-                   class="carousel__next">Go to first slide</a>
-            </li>
-        </ol>
+    <div class="splide" role="group" aria-label="News Carosal">
+        <div class="splide__track">
+            <ul class="splide__list" id="newsList">
+            </ul>
+        </div>
     </div>
 
 </section>
