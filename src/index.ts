@@ -1,6 +1,7 @@
 import Splide from "@splidejs/splide";
 
 const newsList = document.getElementById("newsList") as HTMLUListElement;
+const eventsList = document.getElementById("eventsList") as HTMLUListElement;
 
 function createSlides(image, title, content) {
     return `
@@ -26,7 +27,7 @@ function createRows() {
 
     for(let i=0; i<10; i++)
     {
-        cols.push(createSlides("/img/card-img.webp", "The news title", "News content"));
+        cols.push(createSlides("/img/news-card.webp", "The news title", "News content"));
 
         if(i % colPerRow === 0)
         {
@@ -38,11 +39,40 @@ function createRows() {
     return rows.reverse().join("\n");
 }
 
-newsList.innerHTML = createRows();
+function createEvent(image, title, description)
+{
+    return `
+    <li class="splide__slide">
+                    <div class="event-card">
+                        <img src="${image}" alt="card image" class="event-image">
+                        <div class="hover-panel">
+                            <h4>${title}</h4>
+                            <p>
+                                ${description}
+                            </p>
+                        </div>
+                    </div>
+                </li>`;
+}
 
-new Splide('.splide', {classes: {
+newsList.innerHTML = createRows();
+eventsList.innerHTML = [...Array(10).keys()]
+    .map(() => createEvent("/img/festival-card.webp", "Title", "Details"))
+    .join("\n");
+
+console.log(Array(10)
+    .map(() => createEvent("/img/festival-card.webp", "Title", "Details"))
+    .join("\n"))
+
+new Splide('.news-slide', {classes: {
     arrow: "splide__arrow news-arrow"
     }}).mount();
+
+new Splide('.event-slide', {classes: {
+    arrow: "splide__arrow events-arrow"
+    },
+    autoWidth: true
+}).mount();
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp
