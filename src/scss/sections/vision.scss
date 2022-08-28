@@ -15,20 +15,13 @@
       padding-bottom: 10rem;
       font-weight: bold;
     }
+  }
 
-    button {
-      width: 200px;
-      height: 62px;
-      font: normal normal normal 30px/36px KonTikiJF Aloha;
-      text-transform: lowercase;
-      background-color: #3CB189;
-      border: none;
-      color: #FFFFFF;
-      padding: 0.4rem 1.3rem;
-      border-radius: 8px;
-      box-shadow: 6px 5px 34px #00000045;
-      margin-bottom: 10rem;
-
-    }
+  .image-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 }

@@ -1,5 +1,28 @@
 .event {
+  background: #FAFFE9;
 
+  .fab {
+    border-radius: 50%;
+    width: 114px;
+    height: 114px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #2C5C4C;
+    border: 8px solid #BCCD81;
+    color: #FFFFFF;
+    font: normal normal normal 30px/31px KonTikiJF Aloha;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      animation: swipe 500ms alternate-reverse infinite;
+      border-width: 5px;
+    }
+  }
 
   .event-card {
     position: relative;
@@ -31,7 +54,7 @@
       right: 0;
       height: 60%;
       opacity: 0;
-      transition: opacity 500ms;
+      transition: opacity 1s;
 
 
       h4 {
@@ -52,5 +75,23 @@
 
   .events-arrow {
     display: none;
+  }
+
+  .center-flex {
+    margin: 1em 0;
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  40% {
+    transform: translate(-80%, -50%);
+  }
+
+  to {
+    transform: translate(-70%, -50%);
   }
 }
