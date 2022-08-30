@@ -4,6 +4,7 @@ import {circleData} from "./content";
 const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
 const circlesList = document.getElementById("circlesList") as HTMLDivElement;
+const gallery = document.getElementById("gallery") as HTMLDivElement;
 
 function createSlides(image, title, content) {
     return `
@@ -27,12 +28,10 @@ function createRows() {
     let cols = [];
     const rows = []
 
-    for(let i=0; i<10; i++)
-    {
+    for (let i = 0; i < 10; i++) {
         cols.push(createSlides("/img/news-card.webp", "The news title", "News content"));
 
-        if(i % colPerRow === 0)
-        {
+        if (i % colPerRow === 0) {
             rows.push(`<li class="splide__slide carousal-slide">${cols.join("\n")}</li>`);
             cols = [];
         }
@@ -41,8 +40,7 @@ function createRows() {
     return rows.reverse().join("\n");
 }
 
-function createEvent(image, title, description)
-{
+function createEvent(image, title, description) {
     return `
     <li class="splide__slide">
         <div class="event-card">
@@ -58,7 +56,7 @@ function createEvent(image, title, description)
 function createCircles() {
     const elements = [];
 
-    for(const title in circleData)
+    for (const title in circleData)
         elements.push(`
     <img src="${circleData[title].img}" alt="" tabindex="1">
     <div class="circle-center">
@@ -69,25 +67,54 @@ function createCircles() {
     return elements.join("\n");
 }
 
+function getPercentOfView(element) {
+    const viewTop = window.pageYOffset;
+    const viewBottom = viewTop + window.innerHeight;
+    const rect = element.getBoundingClientRect();
+    const elementTop = rect.top + viewTop;
+    const elementBottom = elementTop + rect.height;
+
+    if (elementBottom <= viewTop)
+        return -1;
+    else if (elementTop >= viewBottom)
+        return 0.3;
+
+    else if (elementBottom <= viewBottom) {
+        if (elementTop < viewTop || true)
+            return (elementBottom - viewTop) / window.innerHeight ;
+        else
+            return (elementBottom - elementTop) / window.innerHeight ;
+    } else
+        return (viewBottom - elementTop) / window.innerHeight;
+}
+
 circlesList.innerHTML = createCircles();
 newsList.innerHTML = createRows();
 eventsList.innerHTML = [...Array(10).keys()]
     .map(() => createEvent("/img/festival-card.webp", "Title", "Details"))
     .join("\n");
 
-console.log(Array(10)
-    .map(() => createEvent("/img/festival-card.webp", "Title", "Details"))
-    .join("\n"))
+new Splide(".news-slide", {
+    classes: {
+        arrow: "splide__arrow news-arrow"
+    }
+}).mount();
 
-new Splide('.news-slide', {classes: {
-    arrow: "splide__arrow news-arrow"
-    }}).mount();
-
-new Splide('.event-slide', {classes: {
-    arrow: "splide__arrow events-arrow"
+new Splide(".event-slide", {
+    classes: {
+        arrow: "splide__arrow events-arrow"
     },
     autoWidth: true
 }).mount();
+
+window.addEventListener("scroll", () =>
+    document.body.style.setProperty("--scroll",
+        String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), false);
+
+window.addEventListener("scroll", () =>
+    document.body.style.setProperty("--gallery-scroll",
+        String(getPercentOfView(gallery))), false)
+
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp
