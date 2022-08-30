@@ -1,0 +1,109 @@
+.event {
+  background: #FAFFE9;
+
+  .splide {
+    z-index: 2;
+  }
+
+  .fab {
+    border-radius: 50%;
+    width: 114px;
+    height: 114px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #2C5C4C;
+    border: 8px solid #BCCD81;
+    color: #FFFFFF;
+    font: normal normal normal 30px/31px KonTikiJF Aloha;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      animation: swipe 500ms alternate-reverse infinite;
+      border-width: 5px;
+    }
+  }
+
+  .event-card {
+    position: relative;
+    box-shadow: 8px 8px 15px #02191124;
+    width: fit-content;
+    margin: 0 2rem;
+
+    .event-image {
+      width: min(30vw, 325px);
+      object-fit: fill;
+      border-radius: 15px 15px 0 0;
+    }
+
+    &:hover {
+      .hover-panel {
+        opacity: 1;
+      }
+    }
+
+    .hover-panel {
+      background: url("/img/hover-pane.png") no-repeat top;
+      background-clip: border-box;
+      position: absolute;
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      opacity: 0;
+      transition: opacity 1s;
+
+
+      h4 {
+        font: normal normal normal 21px/21px KonTikiJF Aloha;
+        color: #BCCD81;
+        z-index: 2;
+        padding: 1rem;
+      }
+
+      p {
+        color: #BCCD81;
+        font: normal normal 300 14px/17px Sofia Pro;
+        padding: 1rem;
+      }
+
+    }
+  }
+
+  .events-arrow {
+    display: none;
+  }
+
+  .bottom-decoration {
+    position: absolute;
+    bottom: -70px;
+    left: -35px;
+  }
+
+  .bottom-decoration:last-child {
+    left: unset;
+    bottom: -55px;
+    right: -60px;
+  }
+}
+
+@keyframes swipe {
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  60% {
+    transform: translate(-80%, -50%);
+  }
+
+  0% {
+    transform: translate(-70%, -50%);
+  }
+}

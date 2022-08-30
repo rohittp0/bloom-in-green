@@ -1,0 +1,132 @@
+.community {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    .text-box-2 {
+      position: relative;
+
+      .text-card {
+        display: flex;
+        position: absolute;
+        top: 44vh;
+        left: 2rem;
+        color: #ECFCF6;
+        p {
+          font: normal normal bold 31px/16px Sofia Pro;
+          padding-bottom: 1em;
+        }
+        .text-2 {
+          font: normal normal normal 12px/0px Sofia Pro;
+          color: #ECFCF6;
+        }
+      }
+
+    }
+  }
+
+  .img1 {
+    margin-top: 3.9vh;
+    height: 56vh;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .container {
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    box-shadow: 16px 15px 41px #97979729;
+
+    h3 {
+      color: #1D4638;
+      font: normal normal normal 30px/80px KonTikiJF Aloha;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .side-images {
+    display: inline-block;
+
+    .row1 {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1.5rem;
+
+      .text-box {
+        position: relative;
+
+        .text {
+          display: flex;
+          position: absolute;
+          top: 21vh;
+          left: 2rem;
+          color: #ECFCF6;
+          p {
+            font: normal normal bold 20px/16px Sofia Pro;
+            padding-bottom: 1em;
+          }
+          .text-2 {
+            font: normal normal normal 12px/0px Sofia Pro;
+            color: #ECFCF6;
+          }
+        }
+      }
+    }
+
+    .row2 {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0.5rem;
+
+      .text-box {
+        position: relative;
+
+        .text {
+          display: flex;
+          position: absolute;
+          top: 21vh;
+          left: 2rem;
+          color: #ECFCF6;
+          p {
+            font: normal normal bold 20px/16px Sofia Pro;
+            padding-bottom: 1em;
+          }
+          .text-2 {
+            font: normal normal normal 12px/0px Sofia Pro;
+            color: #ECFCF6;
+          }
+        }
+      }
+    }
+
+    .img2 {
+      height: 30vh;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 5px none #3CB189;
+      border-top-style: solid;
+      position: relative;
+      padding: 1.5rem 0 0 0;
+      margin: 0 1rem;
+      display: flex;
+    }
+  }
+
+  .bottom-decoration {
+    position: absolute;
+    bottom: -75px;
+    left: -35px;
+    z-index: 0;
+  }
+
+  .bottom-decoration:last-child {
+    left: unset;
+    right: -60px;
+  }
+}

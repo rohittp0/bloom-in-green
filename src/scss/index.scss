@@ -1,13 +1,28 @@
 @import "fonts";
 
+@import "sections/hero";
+@import "sections/vision";
+@import "sections/festival";
+@import "sections/newroom";
+@import "sections/join";
+@import "sections/community";
+@import "sections/footer";
+@import "sections/event";
+@import "sections/gallery";
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: normal normal normal 20px KonTikiJF Aloha;
   position: relative;
+  background: #FAFFE9;
 }
 
 .image-background {
@@ -22,470 +37,25 @@ body {
 
 section {
   height: 100vh;
-}
-
-.hero {
-  padding: 1em 0;
   position: relative;
-
-  .nav-menu {
-    display: flex;
-    justify-content: space-around;
-
-    a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font: normal normal normal 35px/116px KonTikiJF Aloha;
-      text-transform: capitalize;
-    }
-
-    img {
-      width: 11rem;
-    }
-
-    button {
-      font: normal normal normal 30px/36px KonTikiJF Aloha;
-      text-transform: capitalize;
-      background-color: #3CB189;
-      border-radius: 29px;
-      border: none;
-      color: #FFFFFF;
-      padding: 0.4rem 1.3rem;
-
-    }
-  }
-
-  .video-row {
-    display: flex;
-    justify-content: end;
-    margin: 5em 5em 3em 10em;
-
-    button {
-      border-radius: 50%;
-      width: 114px;
-      height: 114px;
-      background-color: #2C5C4C;
-      border: 8px solid #BCCD81;
-      color: #FFFFFF;
-      font: normal normal normal 30px/31px KonTikiJF Aloha;
-      cursor: pointer;
-
-      transition: all 0.5s ease;
-
-      &:hover {
-        transform: translateY(-10px) scale(1.1);
-        border-width: 5px;
-      }
-
-      &:focus {
-        transform: scale(0.001);
-
-
-      }
-    }
-  }
-
-  .content-row {
-    margin-left: 5em;
-    margin-top: 1rem;
-    margin-bottom: 5em;
-
-    h1 {
-      color: #FFFFFF;
-      font: normal normal normal 70px/93px KonTikiJF Aloha;
-    }
-
-    h2 {
-      color: #FFFFFF;
-
-    }
-  }
-
+  scroll-margin-top: -2rem;
+  overflow-x: clip;
 }
 
-.vision {
-  position: relative;
-
-  .vision-left {
-    padding-top: 15rem;
-    padding-left: 10rem;
-
-    h2 {
-      font: normal normal normal 55px/110px KonTikiJF Aloha;
-    }
-
-    h4 {
-      font: normal normal normal 20px/29px Sofia Pro;
-      color: #648673;
-      padding-bottom: 10rem;
-      font-weight: bold;
-    }
-
-    button {
-      width: 200px;
-      height: 62px;
-      font: normal normal normal 30px/36px KonTikiJF Aloha;
-      text-transform: lowercase;
-      background-color: #3CB189;
-      border: none;
-      color: #FFFFFF;
-      padding: 0.4rem 1.3rem;
-      border-radius: 8px;
-      box-shadow: 6px 5px 34px #00000045;
-      margin-bottom: 10rem;
-
-    }
-  }
+.button-primary {
+  font: bold normal normal 26px/30px Sofia Pro;
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: #3CB189;
+  border: none;
+  color: #FFFFFF;
+  padding: 1% 3%;
+  border-radius: 8px;
+  box-shadow: 6px 5px 34px #00000045;
 }
 
-.newsroom {
-  background: #e6fff6;
-  padding: 4em;
-
-  .title {
-    margin: 3em 2em;
-
-    p, h2 {
-      margin: 0.5em 0;
-      font: normal normal normal 54px/70px KonTikiJF Aloha;
-      color: #1D4638;
-      text-align: right;
-    }
-
-    p {
-      font: normal normal normal 25px/30px Sofia Pro;
-      letter-spacing: 0;
-      color: #1D4638;
-      opacity: 1;
-      font-weight: bold;
-    }
-
-  }
-
-  .news-arrow {
-    background-color: white;
-    padding: 4em 0.2em;
-    box-shadow: 5px 8px 43px #00000029;
-  }
-
-  .carousal-slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .carousal-content {
-    position: relative;
-    padding-bottom: 1em;
-
-    .news-card {
-      position: relative;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-      width: 20vw;
-      height: 47vh;
-
-      img {
-        width: 20vw;
-        aspect-ratio: 2;
-        object-fit: cover;
-        border-radius: 8px 8px 0 0;
-      }
-
-      h4 {
-        font: normal normal normal 21px/21px KonTikiJF Aloha;
-        padding: 0.9em 0.3em 0.4em;
-      }
-
-      button {
-        background-color: #1D4638;
-        font: normal normal medium 15px/76px Sofia Pro;
-        color: white;
-        border-radius: 2em;
-        padding: 0.5em;
-        margin-left: 0.5em;
-        width: 7em;
-      }
-
-      p {
-        font: normal normal normal 10px/15px Sofia Pro;
-        padding-top: 1em;
-        padding-bottom: 1.4em;
-        padding-left: 1em;
-
-      }
-    }
-  }
-}
-
-
-.join {
-
-  position: relative;
-  height: unset;
-  min-height: 600px;
-
-  .center-white {
-    text-align: center;
-    font: normal normal normal 50px/59px KonTikiJF Aloha, Sofia Pro, sans-serif;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    padding: 1em 10%;
-
-    &::after {
-      display: block;
-      font: normal normal bold 26px/40px sans-serif;
-      letter-spacing: 0;
-      text-align: right;
-
-      content: "- Bloom in green";
-    }
-  }
-
-  .image-background {
-    filter: brightness(50%);
-  }
-
-  .join-form {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    bottom: 20%;
-
-    form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #joinUsButton, #joinUsInput {
-      border: none;
-      border-radius: 10px 0 0 10px;
-      padding: 0.5rem;
-      width: min(40vw, 450px);
-      font: normal normal normal 20px Sofia Pro;
-      letter-spacing: 0;
-    }
-
-    #joinUsButton {
-      border-radius: 0 10px 10px 0;
-      background: #1D4638;
-      width: auto;
-      padding: 0.5rem 1rem;
-      color: #FFFFFF;
-      cursor: pointer;
-    }
-
-  }
-}
-
-.community {
-  background-color: #faffe9;
+.center-flex {
   display: flex;
-  position: relative;
   justify-content: center;
-  align-items: center;
-
-  .card {
-    display: flex;
-    flex-direction: column;
-
-    .text-box-2 {
-      position: relative;
-
-      .text-card {
-        display: flex;
-        position: absolute;
-        top: 44vh;
-        left: 2rem;
-        color: #ECFCF6;
-        p {
-          font: normal normal bold 31px/16px Sofia Pro;
-          padding-bottom: 1em;
-        }
-        .text-2 {
-          font: normal normal normal 12px/0px Sofia Pro;
-          color: #ECFCF6;
-        }
-      }
-
-    }
-  }
-
-  .img1 {
-    margin-top: 3.9vh;
-    height: 56vh;
-    aspect-ratio: 1;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
-  .container {
-    background-color: #FAFAFA;
-    border-radius: 10px;
-    box-shadow: 16px 15px 41px #97979729;
-
-    h3 {
-      color: #1D4638;
-      font: normal normal normal 30px/80px KonTikiJF Aloha;
-      text-align: center;
-      font-weight: bold;
-    }
-  }
-
-  .side-images {
-    display: inline-block;
-
-    .row1 {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 1.5rem;
-
-      .text-box {
-        position: relative;
-
-        .text {
-          display: flex;
-          position: absolute;
-          top: 21vh;
-          left: 2rem;
-          color: #ECFCF6;
-          p {
-            font: normal normal bold 20px/16px Sofia Pro;
-            padding-bottom: 1em;
-          }
-          .text-2 {
-            font: normal normal normal 12px/0px Sofia Pro;
-            color: #ECFCF6;
-          }
-        }
-      }
-    }
-
-    .row2 {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 0.5rem;
-
-      .text-box {
-        position: relative;
-
-        .text {
-          display: flex;
-          position: absolute;
-          top: 21vh;
-          left: 2rem;
-          color: #ECFCF6;
-          p {
-            font: normal normal bold 20px/16px Sofia Pro;
-            padding-bottom: 1em;
-          }
-          .text-2 {
-            font: normal normal normal 12px/0px Sofia Pro;
-            color: #ECFCF6;
-          }
-        }
-      }
-    }
-
-
-
-
-    .img2 {
-      height: 30vh;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border: 5px none #3CB189;
-      border-top-style: solid;
-      position: relative;
-      padding: 1.5rem 0 0 0;
-      margin: 0 1rem;
-      display: flex;
-    }
-
-  }
-
-}
-
-.footer {
-  height: unset;
-  background-color: black;
-  color: white;
-  text-align: center;
-  font: normal normal normal 26px/40px Sofia Pro;
-  padding: 6rem 4rem 2rem 4rem;
-
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-
-    .logo {
-
-      img {
-        width: 7rem;
-      }
-    }
-
-    p {
-      opacity: 0.5;
-      font-size: 1rem;
-      max-width: 290px;
-      line-height: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .contact {
-      font: normal normal normal 42px/40px Sofia Pro;
-      font-size: 20px;
-      color: aliceblue;
-      text-align: right;
-
-      .contact-head {
-        font: normal normal normal 42px/40px KonTikiJF Aloha, Sofia Pro, sans-serif;
-        letter-spacing: 0;
-        color: #FFFFFF;
-      }
-
-      .social-container {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-
-        a {
-          text-decoration: none;
-          color: #FFFFFF;
-        }
-      }
-    }
-  }
-
-  hr {
-    opacity: 0.4;
-  }
-
-  .logo {
-    text-align: left;
-  }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-
-    .address {
-      font: normal normal normal 26px/40px Sofia Pro;
-      font-size: 1rem;
-      opacity: 0.5;
-      max-width: 330px;
-      text-align: left;
-      line-height: 1.5rem;
-
-      .copy-right {
-        opacity: 0.7;
-        margin-top: 1rem;
-      }
-    }
-  }
+  width: 100%;
 }
