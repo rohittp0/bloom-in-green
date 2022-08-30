@@ -1,9 +1,7 @@
 .community {
-  background-color: #FAFFE9;
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center;
 
   .card {
     display: flex;
@@ -107,9 +105,6 @@
       }
     }
 
-
-
-
     .img2 {
       height: 30vh;
       aspect-ratio: 1;
@@ -121,7 +116,17 @@
       margin: 0 1rem;
       display: flex;
     }
-
   }
 
+  .bottom-decoration {
+    position: absolute;
+    bottom: -75px;
+    left: -35px;
+    z-index: 0;
+  }
+
+  .bottom-decoration:last-child {
+    left: unset;
+    right: -60px;
+  }
 }

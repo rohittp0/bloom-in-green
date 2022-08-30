@@ -1,6 +1,6 @@
 .newsroom {
-  background: #e6fff6;
   padding: 4em;
+  z-index: 1;
 
   .title {
     margin: 3em 2em;
@@ -76,5 +76,14 @@
 
       }
     }
+  }
+
+  .leaf-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 100%;
+    z-index: -1;
   }
 }

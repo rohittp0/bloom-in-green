@@ -9,20 +9,23 @@
   .top-image {
     object-fit: fill;
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+    top: -23px;
+    left: -30px;
+    width: 104vw;
+    z-index: 2;
   }
 
   .center-image {
     width: 50%;
     padding: calc(100vw * 0.22930255895 - 6em) 0 2em 0;
+    z-index: 2;
   }
 
   h2 {
     font: normal normal normal 55px/110px KonTikiJF Aloha;
     letter-spacing: 0;
     color: #1D4638;
+    z-index: 2;
   }
 
   p {
@@ -32,13 +35,14 @@
     letter-spacing: 0;
     color: #648673;
     padding-bottom: 1em;
+    z-index: 2;
   }
 
   .background-green {
     position: absolute;
     width: 100%;
-    bottom: -40%;
-    z-index: -1;
+    top: 0;
+    z-index: 1;
   }
 
 }

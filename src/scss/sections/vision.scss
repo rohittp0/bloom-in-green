@@ -1,9 +1,12 @@
+@import "../utils";
+
 .vision {
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
   .vision-left {
-    padding-top: 15rem;
-    padding-left: 10rem;
 
     h2 {
       font: normal normal normal 55px/110px KonTikiJF Aloha;
@@ -12,7 +15,7 @@
     h4 {
       font: normal normal normal 20px/29px Sofia Pro;
       color: #648673;
-      padding-bottom: 10rem;
+      padding-bottom: 2rem;
       font-weight: bold;
     }
   }
@@ -23,5 +26,57 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+  }
+
+  .circle-container {
+    @include on-circle(7, 30vw, 4em);
+
+    border: solid gold 0.5px;
+    justify-content: center;
+    display: flex;
+
+    &:not(:focus-within) {
+      img:nth-child(1) {
+        box-shadow: 0 0 10px 7px #e1b03c;
+      }
+
+      .circle-center:nth-child(2) {
+        display: initial;
+      }
+    }
+
+    .circle-center {
+      align-self: center;
+      text-align: center;
+      max-width: 20vw;
+      display: none;
+
+      h6 {
+        font-size: 1.25em;
+        font-weight: 100;
+      }
+
+      p {
+        font-family: sans-serif;
+        font-size: 0.75em;
+        text-align: justify-all;
+      }
+    }
+
+
+    img {
+      object-fit: scale-down;
+      border-radius: 50%;
+      border: solid gold 2px;
+      transition: all 500ms;
+
+      &:focus {
+        box-shadow: 0 0 10px 7px #e1b03c;
+      }
+
+      &:focus + .circle-center {
+        display: initial;
+      }
+    }
   }
 }

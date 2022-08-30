@@ -21,6 +21,7 @@ html {
 body {
   font: normal normal normal 20px KonTikiJF Aloha;
   position: relative;
+  background: #FAFFE9;
 }
 
 .image-background {
@@ -37,6 +38,7 @@ section {
   height: 100vh;
   position: relative;
   scroll-margin-top: -2rem;
+  overflow-x: clip;
 }
 
 .button-primary {

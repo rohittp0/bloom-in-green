@@ -1,6 +1,10 @@
 .event {
   background: #FAFFE9;
 
+  .splide {
+    z-index: 2;
+  }
+
   .fab {
     border-radius: 50%;
     width: 114px;
@@ -77,21 +81,29 @@
     display: none;
   }
 
-  .center-flex {
-    margin: 1em 0;
+  .bottom-decoration {
+    position: absolute;
+    bottom: -70px;
+    left: -35px;
+  }
+
+  .bottom-decoration:last-child {
+    left: unset;
+    bottom: -55px;
+    right: -60px;
   }
 }
 
 @keyframes swipe {
-  0% {
+  100% {
     transform: translate(-50%, -50%);
   }
 
-  40% {
+  60% {
     transform: translate(-80%, -50%);
   }
 
-  to {
+  0% {
     transform: translate(-70%, -50%);
   }
 }
