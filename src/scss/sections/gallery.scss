@@ -1,5 +1,5 @@
 .gallery {
-  height: 850vh;
+  height: 600vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,13 +26,13 @@
       .animate {
         animation: shrink 1s linear;
         animation-play-state: paused;
-        animation-delay: calc((-0.3 + var(--gallery-scroll) / 4) * -1s);
+        animation-delay: calc((-0.7 + var(--gallery-scroll) / 2) * -1s);
         animation-iteration-count: 1;
         animation-fill-mode: both;
       }
 
       .delay-1 {
-        animation-delay: calc((-1 + var(--gallery-scroll) / 4) * -1s);
+        animation-delay: calc((-1.5 + var(--gallery-scroll) / 2) * -1s);
       }
 
       .img-div {
@@ -75,10 +75,10 @@
 
 @keyframes shrink {
   from {
-    transform: scale(1) rotateX(0) rotateY(0);
+    transform: scale(1);
   }
 
   to {
-    transform: scale(0) rotateX(95deg) rotateY(-100deg);
+    transform: scale(0);
   }
 }

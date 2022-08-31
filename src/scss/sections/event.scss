@@ -3,6 +3,14 @@
 
   .splide {
     z-index: 2;
+
+    .splide__track:hover + .fab {
+      opacity: 0.4;
+    }
+  }
+
+  .button-primary {
+    padding: 0.7rem 1rem;
   }
 
   .fab {
@@ -19,13 +27,9 @@
     color: #FFFFFF;
     font: normal normal normal 30px/31px KonTikiJF Aloha;
     cursor: pointer;
-
+    animation: swipe 500ms alternate-reverse infinite;
     transition: all 0.5s ease;
-
-    &:hover {
-      animation: swipe 500ms alternate-reverse infinite;
-      border-width: 5px;
-    }
+    pointer-events: none;
   }
 
   .event-card {
