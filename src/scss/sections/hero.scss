@@ -11,6 +11,13 @@
       color: #FFFFFF;
       font: normal normal normal 35px/116px KonTikiJF Aloha;
       text-transform: capitalize;
+
+      transition: all ease 500ms;
+
+      &:hover {
+        text-decoration: underline;
+        line-height: 110px;
+      }
     }
 
     img {
@@ -26,6 +33,13 @@
       color: #FFFFFF;
       padding: 0.4rem 1.3rem;
 
+      transition: all 500ms ease;
+
+      &:hover {
+        background-color: #FFFFFF;
+        color: #3CB189;
+        box-shadow: #3CB189 7px 6px 13px 0;
+      }
     }
   }
 
