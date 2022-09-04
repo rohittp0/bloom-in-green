@@ -82,3 +82,29 @@
     transform: scale(0);
   }
 }
+
+@media screen and (max-width: 390px) {
+  .gallery{
+    .image-track{
+      .image-stack{
+        .img-div {
+          border-width: 2px;
+          border-radius: 10px;
+
+          .img-div {
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .bottom-decoration {
+      width: 80px;
+    }
+
+    .gallery-footer{
+      margin-top: 0.6em;
+      margin-bottom: 6em;
+    }
+  }
+}
