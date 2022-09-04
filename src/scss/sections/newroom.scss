@@ -88,3 +88,9 @@
     z-index: -1;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .newsroom{
+    display: none;
+  }
+}
