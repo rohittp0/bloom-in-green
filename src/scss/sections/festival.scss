@@ -1,6 +1,5 @@
 .festival {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   height: initial;
@@ -45,4 +44,29 @@
     z-index: 1;
   }
 
+}
+
+@media screen and (max-width: 390px) {
+  .festival {
+    .top-image {
+      left: unset;
+    }
+
+    .center-image {
+      width: 70vw;
+      margin: 4em 0 1em 0;
+      padding: 0;
+    }
+
+    .bottom-bar {
+      font-size: 14px;
+      max-width: 90%;
+      line-height: unset;
+    }
+
+    .background-green {
+      width: unset;
+      height: 130%;
+    }
+  }
 }
