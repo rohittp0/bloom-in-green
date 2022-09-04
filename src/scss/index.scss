@@ -65,3 +65,21 @@ section {
   justify-content: center;
   width: 100%;
 }
+
+@media screen and (max-width: 390px) {
+  .hidden_sm {
+    display: none;
+  }
+
+  .hidden_lg {
+    display: none;
+  }
+
+  section {
+    height: unset;
+  }
+
+  h2{
+    font-size: 30px !important;
+  }
+}

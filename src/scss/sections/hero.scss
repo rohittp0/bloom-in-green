@@ -83,10 +83,48 @@
       font: normal normal normal 70px/93px KonTikiJF Aloha;
     }
 
-    h2 {
+    p {
       color: #FFFFFF;
 
     }
   }
+}
 
+@media screen and (max-width: 390px) {
+  .hero {
+    .nav-menu {
+      .logo-link {
+        display: contents;
+
+        img {
+          width: 80%;
+          margin-top: 30%;
+        }
+      }
+    }
+
+    .video-row {
+      button {
+        width: 5rem;
+        height: 5rem;
+        padding: 1em;
+        font: normal normal normal 16px/20px KonTikiJF Aloha;
+        border-width: 6px;
+      }
+    }
+
+    .content-row {
+      margin: unset;
+
+      h1 {
+        font: normal normal normal 35px/40px KonTikiJF Aloha;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
 }
