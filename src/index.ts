@@ -60,7 +60,7 @@ function createCircles() {
 
     for (const title in circleData)
         elements.push(`
-    <img src="${circleData[title].img}" alt="" tabindex="1">
+    <img src="${circleData[title].img}" alt="" tabindex="1" width="22px" height="22px">
     <div class="circle-center">
         <h6>${title}</h6>
         <p>${circleData[title].text}</p>

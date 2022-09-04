@@ -66,13 +66,19 @@ section {
   width: 100%;
 }
 
+@media screen and (min-width: 390px)  {
+  .hidden_lg {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .hidden_sm {
     display: none;
   }
 
   .hidden_lg {
-    display: none;
+    display: unset;
   }
 
   section {
