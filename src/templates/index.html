@@ -41,8 +41,38 @@
 
 <section class="hero">
     <img src="/img/hero-background.webp" alt="group photo" class="image-background">
+    <nav role="navigation" class="hidden_lg">
+        <div id="menuToggle">
+            <label for="fake" hidden>Placeholder</label>
+            <input type="checkbox" id="fake"/>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu" onclick="document.getElementById('fake').checked=false;">
+                <a href="#vision">
+                    <li>About Us</li>
+                </a>
+                <a href="#festival">
+                    <li>Festival 2022</li>
+                </a>
+                <a href="#gallery">
+                    <li>Gallery</li>
+                </a>
+                <a href="https://imjo.in/vvZ93K">
+                    <li>
+                        <button>
+                            Book Your Tickets
+                        </button>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
     <nav class="nav-menu">
-        <a href="#" class="hidden_sm">About Us</a>
+        <a href="#vision" class="hidden_sm">About Us</a>
         <a href="#festival" class="hidden_sm">Festival 2022</a>
         <a href="/" class="logo-link">
             <img src="/img/logo.webp" alt="logo">
@@ -70,7 +100,7 @@
     </div>
 </section>
 
-<section class="vision">
+<section class="vision" id="vision">
     <img src="/img/vision/background-green.jpg" alt="background" class="image-background">
     <img src="/img/vision/vision-bottom.png" alt="background" class="image-bottom">
     <img src="/img/vision/vision-top.png" alt="background" class="image-top">

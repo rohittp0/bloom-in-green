@@ -2,6 +2,24 @@
   padding: 1em 0;
   position: relative;
 
+  button {
+    font: normal normal normal 30px/36px KonTikiJF Aloha;
+    text-transform: capitalize;
+    background-color: #3CB189;
+    border-radius: 29px;
+    border: none;
+    color: #FFFFFF;
+    padding: 0.4rem 1.3rem;
+
+    transition: all 500ms ease;
+
+    &:hover {
+      background-color: #FFFFFF;
+      color: #3CB189;
+      box-shadow: #3CB189 7px 6px 13px 0;
+    }
+  }
+
   .nav-menu {
     display: flex;
     justify-content: space-around;
@@ -22,24 +40,6 @@
 
     img {
       width: 11rem;
-    }
-
-    button {
-      font: normal normal normal 30px/36px KonTikiJF Aloha;
-      text-transform: capitalize;
-      background-color: #3CB189;
-      border-radius: 29px;
-      border: none;
-      color: #FFFFFF;
-      padding: 0.4rem 1.3rem;
-
-      transition: all 500ms ease;
-
-      &:hover {
-        background-color: #FFFFFF;
-        color: #3CB189;
-        box-shadow: #3CB189 7px 6px 13px 0;
-      }
     }
   }
 
@@ -92,6 +92,16 @@
 
 @media screen and (max-width: 390px) {
   .hero {
+    min-height: 100vh;
+
+    @import "../utils/menu";
+
+    #menu{
+      button {
+        font: normal normal normal 20px/26px KonTikiJF Aloha;
+      }
+    }
+
     .nav-menu {
       .logo-link {
         display: contents;
