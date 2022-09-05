@@ -59,3 +59,27 @@
 
   }
 }
+
+@media screen and (max-width: 390px) {
+  .join {
+    .center-white {
+      font: normal normal normal 22px/29px KonTikiJF Aloha, Sofia Pro, sans-serif;
+      padding: 0.8em;
+
+      &::after {
+        font-size: 18px;
+      }
+    }
+
+    .join-form {
+      #joinUsButton, #joinUsInput {
+        border-radius: 0;
+        font: normal normal normal 10px Sofia Pro;
+      }
+
+      #joinUsInput {
+        width: 50vw;
+      }
+    }
+  }
+}
