@@ -77,3 +77,53 @@
     }
   }
 }
+
+@media screen and (max-width: 390px) {
+  .footer{
+    background: #1D4638;
+    padding: 1em 0;
+
+    .footer-top{
+      flex-direction: column;
+      justify-content: center;
+
+      .logo{
+        display: flex;
+        justify-content: center;
+        margin: 2em 0;
+
+        img{
+          width: 50vw;
+        }
+      }
+
+      .contact{
+        p{
+          text-align: center;
+          margin: auto auto 1rem;
+        }
+
+        .social-container{
+          display: flex;
+          justify-content: center;
+          flex-wrap: nowrap;
+          gap: 5px;
+        }
+      }
+    }
+
+    .footer-bottom{
+      .address{
+        max-width: 95%;
+
+        p{
+          text-align: center;
+        }
+
+        p:last-child{
+          margin: 2em 0 0.5em;
+        }
+      }
+    }
+  }
+}
