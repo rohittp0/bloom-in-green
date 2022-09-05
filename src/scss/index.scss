@@ -66,6 +66,10 @@ section {
   width: 100%;
 }
 
+h2 {
+  color: #1D4638;
+}
+
 @media screen and (min-width: 390px)  {
   .hidden_lg {
     display: none;
@@ -77,10 +81,6 @@ section {
     display: none;
   }
 
-  .hidden_lg {
-    display: unset;
-  }
-
   section {
     height: unset;
   }
@@ -88,6 +88,7 @@ section {
   h2{
     font-size: 30px !important;
     line-height: unset !important;
+    text-align: center;
   }
 
   .button-primary {

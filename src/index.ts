@@ -109,6 +109,13 @@ new Splide(".event-slide", {
     autoWidth: true
 }).mount();
 
+new Splide(".community-slide", {
+    classes: {
+        arrow: "splide__arrow events-arrow"
+    },
+    autoWidth: false
+}).mount();
+
 window.addEventListener("scroll", () =>
     document.body.style.setProperty("--scroll",
         String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), false);

@@ -17,10 +17,12 @@
         top: 44vh;
         left: 2rem;
         color: #ECFCF6;
+
         p {
           font: normal normal bold 31px/16px Sofia Pro;
           padding-bottom: 1em;
         }
+
         .text-2 {
           font: normal normal normal 12px/0px Sofia Pro;
           color: #ECFCF6;
@@ -54,7 +56,7 @@
   .side-images {
     display: inline-block;
 
-    .row1 {
+    .row {
       display: flex;
       justify-content: space-around;
       margin-bottom: 1.5rem;
@@ -68,10 +70,12 @@
           top: 21vh;
           left: 2rem;
           color: #ECFCF6;
+
           p {
             font: normal normal bold 20px/16px Sofia Pro;
             padding-bottom: 1em;
           }
+
           .text-2 {
             font: normal normal normal 12px/0px Sofia Pro;
             color: #ECFCF6;
@@ -80,30 +84,8 @@
       }
     }
 
-    .row2 {
-      display: flex;
-      justify-content: space-around;
+    .row:last-child {
       margin-top: 0.5rem;
-
-      .text-box {
-        position: relative;
-
-        .text {
-          display: flex;
-          position: absolute;
-          top: 21vh;
-          left: 2rem;
-          color: #ECFCF6;
-          p {
-            font: normal normal bold 20px/16px Sofia Pro;
-            padding-bottom: 1em;
-          }
-          .text-2 {
-            font: normal normal normal 12px/0px Sofia Pro;
-            color: #ECFCF6;
-          }
-        }
-      }
     }
 
     .img2 {
@@ -129,5 +111,117 @@
   .bottom-decoration:last-child {
     left: unset;
     right: -60px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .community {
+    background: #E6FFF6;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+
+    * {
+      z-index: 1;
+    }
+
+    .image-top, .image-bottom, .image-left {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      z-index: 0;
+    }
+
+    .image-top {
+      top: 0;
+      transform: translateY(-50%);
+    }
+
+    .image-bottom {
+      bottom: 0;
+      transform: translateY(75%);
+    }
+
+    .image-left {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    h2 {
+      margin: 2em 0;
+    }
+
+    .main-card {
+      width: 70%;
+      border-radius: 10px;
+      background: #FFFFFF;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .card-text {
+        padding: 1rem;
+
+        h4, p {
+          color: #424242;
+          font: normal normal normal 18px/30px Sofia Pro;
+          font-weight: bolder;
+        }
+
+        p {
+          font: normal normal normal 12px/14px Sofia Pro;
+        }
+      }
+    }
+
+    .splide {
+      padding-top: 0;
+      width: 100%;
+
+      li{
+        width: fit-content !important;
+      }
+
+      .text-box {
+        position: relative;
+        margin: 0 0.5rem;
+        width: fit-content;
+
+        img {
+          height: 50vh;
+          width: 55vw;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border: 5px none #3CB189;
+          border-top-style: solid;
+          position: relative;
+          padding: 1.5rem 0 0 0;
+          display: flex;
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          color: #ECFCF6;
+
+          h4 {
+            font: normal normal bold 20px/16px Sofia Pro;
+            padding: 15px;
+          }
+
+          p {
+            font: normal normal normal 13px/17px Sofia Pro;
+            color: #ECFCF6;
+            padding: 0 15px 15px;
+          }
+        }
+      }
+    }
   }
 }
