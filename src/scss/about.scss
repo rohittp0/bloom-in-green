@@ -13,16 +13,18 @@
   object-fit: fill;
   position: absolute;
   top: -11px;
-  left: -32px;
-  width: 116%;
+  left: -36px;
+  width: 110%;
+  z-index: -1;
 }
 
 .grass-bottom {
   object-fit: fill;
   position: absolute;
-  left: -23px;
-  width: 110%;
+  left: -27px;
+  width: 104%;
   bottom: -16px;
+  z-index: -1;
 }
 
 h5 {
