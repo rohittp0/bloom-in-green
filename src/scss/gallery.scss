@@ -1,33 +1,39 @@
-.gallery{
-h5 {
-  text-align: center;
-  color: #1D4638;
-  margin-top: 3em;
-  padding-bottom: 2em;
-}
+.gallery {
+  overflow-x: clip;
+
+  h2 {
+    text-align: center;
+    color: #1D4638;
+    margin: 2em 0 1.5em;
+  }
+
   .grass-img {
     object-fit: fill;
     position: relative;
     left: -21px;
     width: 113%;
     bottom: -37px;
-    margin-top: -37px;
   }
 
-  .column{
+  .column {
     .row {
-      display: grid;
-      padding: 0px;
-      grid-auto-flow: column;
+      display: flex;
+      flex-wrap: nowrap;
       overflow-x: auto;
-      overflow-y: clip;
-      height: 5.2em;
-        }
+      margin: 0.15rem 0;
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+
     img {
-     height: 45%;
-     border-radius: 0.4em;
-     margin-right: 0.3em;
-        }
-        }
+      border-radius: 0.4em;
+      margin-right: 0.3em;
+    }
+  }
 
 }
