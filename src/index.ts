@@ -1,7 +1,7 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 
-import {circleData} from "./content";
+import {circleData} from "./utils/content";
 
 const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;

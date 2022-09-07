@@ -1,3 +1,5 @@
+@import "../../utils/menu";
+
 .hero {
   padding: 1em 0;
   position: relative;
@@ -93,14 +95,6 @@
 @media screen and (max-width: 390px) {
   .hero {
     min-height: 100vh;
-
-    @import "../utils/menu";
-
-    #menu{
-      button {
-        font: normal normal normal 20px/26px KonTikiJF Aloha;
-      }
-    }
 
     .nav-menu {
       .logo-link {

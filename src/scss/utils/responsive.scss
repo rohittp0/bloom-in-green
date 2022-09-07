@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: normal normal normal 20px KonTikiJF Aloha;
+  position: relative;
+  background: #FAFFE9;
+}
+
+.clip-x{
+  overflow-x: clip;
+}
+
+.button-primary {
+  font: bold normal normal 20px/28px Sofia Pro;
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: #3CB189;
+  border: none;
+  color: #FFFFFF;
+  padding: 0.7rem 3rem;
+  border-radius: 0.4rem;
+  transition: all 500ms ease;
+
+  &:hover {
+    background-color: #FFFFFF;
+    color: #3CB189;
+    box-shadow: #3CB189 7px 6px 13px 0;
+  }
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+section{
+  position: relative;
+}
+
+@media screen and (min-width: 390px)  {
+  .hidden_lg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .hidden_sm {
+    display: none;
+  }
+  section {
+    height: unset;
+  }
+
+  h2{
+    font-size: 30px !important;
+    line-height: unset !important;
+    text-align: center;
+  }
+
+  .button-primary {
+    font: bold normal normal 14px/18px Sofia Pro;
+  }
+
+}

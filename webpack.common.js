@@ -13,7 +13,8 @@ const pages = fs.readdirSync(path.resolve(__dirname, "./src/templates/"), {withF
 
 module.exports = {
     entry: pages.reduce((config, page) => {
-        config[page] = `./src/${page}.ts`;
+        if(fs.existsSync(path.resolve(`./src/${page}.ts`)))
+            config[page] = `./src/${page}.ts`;
         return config;
     }, {}),
     module: {

@@ -1,29 +1,16 @@
 @import "utils/fonts";
 
-@import "sections/hero";
-@import "sections/vision";
-@import "sections/festival";
-@import "sections/newroom";
-@import "sections/join";
-@import "sections/community";
-@import "sections/footer";
-@import "sections/event";
-@import "sections/gallery";
+@import "index/sections/hero";
+@import "index/sections/vision";
+@import "index/sections/festival";
+@import "index/sections/newroom";
+@import "index/sections/join";
+@import "index/sections/community";
+@import "index/sections/footer";
+@import "index/sections/event";
+@import "index/sections/gallery";
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font: normal normal normal 20px KonTikiJF Aloha;
-  position: relative;
-  background: #FAFFE9;
-}
+@import "utils/responsive";
 
 .image-background {
   z-index: -1;
@@ -42,56 +29,6 @@ section {
   overflow-x: clip;
 }
 
-.button-primary {
-  font: bold normal normal 20px/28px Sofia Pro;
-  text-transform: capitalize;
-  text-decoration: none;
-  background-color: #3CB189;
-  border: none;
-  color: #FFFFFF;
-  padding: 0.7rem 3rem;
-  border-radius: 0.4rem;
-  transition: all 500ms ease;
-
-  &:hover {
-    background-color: #FFFFFF;
-    color: #3CB189;
-    box-shadow: #3CB189 7px 6px 13px 0;
-  }
-}
-
-.center-flex {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 h2 {
   color: #1D4638;
-}
-
-@media screen and (min-width: 390px)  {
-  .hidden_lg {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .hidden_sm {
-    display: none;
-  }
-
-  section {
-    height: unset;
-  }
-
-  h2{
-    font-size: 30px !important;
-    line-height: unset !important;
-    text-align: center;
-  }
-
-  .button-primary {
-    font: bold normal normal 14px/18px Sofia Pro;
-  }
 }
