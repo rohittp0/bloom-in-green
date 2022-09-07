@@ -9,11 +9,12 @@
   height: 100%;
   object-fit: cover;
 }
+
 .grass-top {
   object-fit: fill;
   position: absolute;
   top: -11px;
-  left: -36px;
+  left: -27px;
   width: 110%;
   z-index: -1;
 }
@@ -21,8 +22,8 @@
 .grass-bottom {
   object-fit: fill;
   position: absolute;
-  left: -27px;
-  width: 104%;
+  left: -12px;
+  width: 105%;
   bottom: -16px;
   z-index: -1;
 }
