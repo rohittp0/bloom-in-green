@@ -9,3 +9,34 @@
   height: 100%;
   object-fit: cover;
 }
+.grass-top {
+  object-fit: fill;
+  position: absolute;
+  top: -11px;
+  left: -32px;
+  width: 116%;
+}
+
+.grass-bottom {
+  object-fit: fill;
+  position: absolute;
+  left: -23px;
+  width: 110%;
+  bottom: -16px;
+}
+
+h5 {
+  text-align: center;
+  color: #1D4638;
+  padding-top: 4em;
+  font: normal normal normal 17px/10px Sofia Pro;
+  font-weight: bolder;
+}
+p {
+  text-align: center;
+  font: normal normal normal 6px/10px Sofia Pro;
+  color: #648673;
+  padding-top: 3em;
+  font-weight: bold;
+  padding-bottom: 18em;
+}
