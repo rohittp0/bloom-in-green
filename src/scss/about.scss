@@ -11,6 +11,8 @@
 }
 
 .about {
+  overflow-x: clip;
+  
   .grass-top {
     object-fit: fill;
     position: absolute;
