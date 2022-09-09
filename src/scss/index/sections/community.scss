@@ -13,19 +13,21 @@
 
       .text-card {
         display: flex;
+        flex-direction: column;
         position: absolute;
         top: 44vh;
         left: 2rem;
         color: #ECFCF6;
 
-        p {
-          font: normal normal bold 31px/16px Sofia Pro;
-          padding-bottom: 1em;
+        h4 {
+          font: normal normal bold 20px/16px Sofia Pro;
+          padding: 15px;
         }
 
-        .text-2 {
-          font: normal normal normal 12px/0px Sofia Pro;
+        p {
+          font: normal normal normal 13px/17px Sofia Pro;
           color: #ECFCF6;
+          padding: 0 15px 15px;
         }
       }
 
@@ -66,19 +68,22 @@
 
         .text {
           display: flex;
+          flex-direction: column;
           position: absolute;
-          top: 21vh;
-          left: 2rem;
+          bottom: 0;
+          left: 0;
+          padding: 0 1rem;
           color: #ECFCF6;
 
-          p {
+          h4 {
             font: normal normal bold 20px/16px Sofia Pro;
-            padding-bottom: 1em;
+            padding: 15px;
           }
 
-          .text-2 {
-            font: normal normal normal 12px/0px Sofia Pro;
+          p {
+            font: normal normal normal 13px/17px Sofia Pro;
             color: #ECFCF6;
+            padding: 0 15px 15px;
           }
         }
       }
@@ -138,6 +143,7 @@
     }
 
     .image-bottom {
+      z-index: 1;
       bottom: 0;
       transform: translateY(75%);
     }
@@ -180,7 +186,7 @@
       padding-top: 0;
       width: 100%;
 
-      li{
+      li {
         width: fit-content !important;
       }
 
@@ -202,12 +208,9 @@
         }
 
         .text {
-          display: flex;
-          flex-direction: column;
           position: absolute;
           bottom: 0;
           left: 0;
-          padding: 1rem;
           color: #ECFCF6;
 
           h4 {

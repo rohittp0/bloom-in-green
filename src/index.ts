@@ -92,7 +92,7 @@ function getPercentOfView(element) {
 
 circlesList.innerHTML = createCircles();
 newsList.innerHTML = createRows();
-eventsList.innerHTML = [...Array(10).keys()]
+eventsList.innerHTML = [...Array(13).keys()]
     .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, "Title", "Details"))
     .join("\n");
 
