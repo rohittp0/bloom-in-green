@@ -55,8 +55,9 @@ section{
   .hidden_sm {
     display: none;
   }
+
   section {
-    height: unset;
+    height: unset !important;
   }
 
   h2{

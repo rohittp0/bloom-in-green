@@ -40,7 +40,8 @@
 
     .event-image {
       width: min(30vw, 325px);
-      object-fit: fill;
+      aspect-ratio: 0.75;
+      object-fit: cover;
       border-radius: 15px 15px 0 0;
     }
 

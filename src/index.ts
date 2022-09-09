@@ -31,7 +31,7 @@ function createRows() {
     const rows = []
 
     for (let i = 0; i < 10; i++) {
-        cols.push(createSlides("/img/news-card.webp", "The news title", "News content"));
+        cols.push(createSlides("/img/index/news-card.webp", "The news title", "News content"));
 
         if (i % colPerRow === 0) {
             rows.push(`<li class="splide__slide carousal-slide">${cols.join("\n")}</li>`);
@@ -93,7 +93,7 @@ function getPercentOfView(element) {
 circlesList.innerHTML = createCircles();
 newsList.innerHTML = createRows();
 eventsList.innerHTML = [...Array(10).keys()]
-    .map(() => createEvent("/img/festival-card.webp", "Title", "Details"))
+    .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, "Title", "Details"))
     .join("\n");
 
 new Splide(".news-slide", {
