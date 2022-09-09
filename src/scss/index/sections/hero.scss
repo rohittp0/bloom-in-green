@@ -38,6 +38,10 @@
         text-decoration: underline;
         line-height: 110px;
       }
+
+      &:has(img):hover, &:has(button):hover{
+        line-height: 116px;
+      }
     }
 
     img {
@@ -69,8 +73,6 @@
 
       &:focus {
         transform: scale(0.001);
-
-
       }
     }
   }
