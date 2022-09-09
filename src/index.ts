@@ -60,7 +60,7 @@ function createCircles() {
 
     for (const title in circleData)
         elements.push(`
-    <img src="${circleData[title].img}" alt="" tabindex="1" width="22px" height="22px">
+    <img src="${circleData[title].img}" alt="" tabindex="1" width="22" height="22">
     <div class="circle-center">
         <h6>${title}</h6>
         <p>${circleData[title].text}</p>
@@ -122,10 +122,11 @@ window.addEventListener("scroll", () =>
 
 window.addEventListener("scroll", () =>
     document.body.style.setProperty("--gallery-scroll",
-        String(getPercentOfView(gallery))), false)
-
+        String(getPercentOfView(gallery))), false);
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp
     Varsha : https://www.linkedin.com/in/varsha-shaheen-a10295231`,
     "background-color:black;border-left: solid red 8px;color:white;padding:10px;border-radius:5px");
+
+window["CollectId"] = "631b654d59596851e282d550";
