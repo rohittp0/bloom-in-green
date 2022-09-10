@@ -5,7 +5,7 @@
     z-index: 2;
 
     .splide__track:hover + .fab {
-      opacity: 0.4;
+      opacity: 0;
     }
   }
 
@@ -113,7 +113,7 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .event {
 
     .splide {
