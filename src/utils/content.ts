@@ -7,3 +7,10 @@ export const circleData = {
     "Health": {img: "/img/index/placeholder-icon.png", text: "Education is abc"},
     "Art": {img: "/img/index/placeholder-icon.png", text: "Education is abc"}
 }
+
+export const eventDetails = [
+    ["Easy Wanderlings", "Live"],
+    ["Fire Hoop", "Performance Art"],
+    ["Hang in balance ft Flavio Lopez", "Live"],
+]
+

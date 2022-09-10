@@ -1,7 +1,7 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 
-import {circleData} from "./utils/content";
+import {circleData, eventDetails} from "./utils/content";
 
 const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
@@ -93,8 +93,8 @@ function getPercentOfView(element) {
 
 circlesList.innerHTML = createCircles();
 newsList.innerHTML = createRows();
-eventsList.innerHTML = [...Array(13).keys()]
-    .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, "Title", "Details"))
+eventsList.innerHTML = eventDetails
+    .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, v[0], v[1]))
     .join("\n");
 
 new Splide(".news-slide", {
