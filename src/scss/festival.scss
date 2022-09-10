@@ -1,0 +1,26 @@
+@import "index/sections/hero";
+
+.image-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero{
+  height: 100vh;
+
+  .content-row{
+    margin: 30vh 0 0;
+    display: flex;
+    justify-content: center;
+
+    img{
+      filter: invert(2%) sepia(7%) saturate(2759%) hue-rotate(321deg) brightness(103%) contrast(89%);
+      transform: scale(1.5);
+    }
+  }
+}
