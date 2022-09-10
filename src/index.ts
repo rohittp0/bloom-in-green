@@ -7,7 +7,7 @@ const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
 const circlesList = document.getElementById("circlesList") as HTMLDivElement;
 const gallery = document.getElementById("gallery") as HTMLDivElement;
-const video = document.getElementById("heroMovie") as HTMLVideoElement;
+const video = document.getElementById("heroMovie") as HTMLIFrameElement;
 
 function createSlides(image, title, content) {
     return `
@@ -132,16 +132,12 @@ document.addEventListener('mozfullscreenchange', onFullScreenChange, false);
 function onFullScreenChange() {
     // @ts-ignore
     if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement)
-    {
-        video.pause();
         video.classList.add("scale-down");
-    }
 }
 
 document.getElementById("playButton").addEventListener("click", async ()=> {
     video.classList.remove("scale-down");
     await video.requestFullscreen();
-    await video.play();
 });
 
 video.addEventListener("ended", () =>

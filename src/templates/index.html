@@ -43,8 +43,14 @@
 <body>
 
 <section class="hero">
-    <video src="/img/index/web-banner.mov" controls class="scale-down" id="heroMovie"></video>
-    <img src="/img/index/hero-background.webp" alt="group photo" class="image-background">
+    <video src="/img/index/web-banner.mov" class="bg-video hidden_sm" autoplay loop></video>
+    <img src="/img/index/hero-background.webp" alt="group photo" class="image-background hidden_lg">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jZz8kSh018w" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen class="scale-down" id="heroMovie"></iframe>
+
     <nav class="hidden_lg ham-nav">
         <div id="menuToggle">
             <label for="fake" hidden>Placeholder</label>
@@ -111,7 +117,8 @@
     <div class="vision-left">
         <h2>More than a festival!</h2>
         <p>
-            Welcome to a new paradigm where we converge in the most belonging way to create, express, connect & bloom. This is a
+            Welcome to a new paradigm where we converge in the most belonging way to create, express, connect & bloom.
+            This is a
             space where you gather to make meaningful connections, do your first of something, prioritise health &
             passion, celebrate life and our respect for nature.
             <br><br>

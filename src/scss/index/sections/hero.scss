@@ -93,6 +93,14 @@
     }
   }
 
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
   .scale-down {
     position: absolute;
     top: 0;
