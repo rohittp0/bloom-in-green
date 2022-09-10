@@ -7,6 +7,7 @@ const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
 const circlesList = document.getElementById("circlesList") as HTMLDivElement;
 const gallery = document.getElementById("gallery") as HTMLDivElement;
+const video = document.getElementById("heroMovie") as HTMLVideoElement;
 
 function createSlides(image, title, content) {
     return `
@@ -123,6 +124,32 @@ window.addEventListener("scroll", () =>
 window.addEventListener("scroll", () =>
     document.body.style.setProperty("--gallery-scroll",
         String(getPercentOfView(gallery))), false);
+
+document.addEventListener('fullscreenchange', onFullScreenChange, false);
+document.addEventListener('webkitfullscreenchange', onFullScreenChange, false);
+document.addEventListener('mozfullscreenchange', onFullScreenChange, false);
+
+function onFullScreenChange() {
+    // @ts-ignore
+    if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement)
+    {
+        video.pause();
+        video.classList.add("scale-down");
+    }
+}
+
+document.getElementById("playButton").addEventListener("click", async ()=> {
+    video.classList.remove("scale-down");
+    await video.requestFullscreen();
+    await video.play();
+});
+
+video.addEventListener("ended", () =>
+{
+    video.classList.add("scale-down");
+    return document.exitFullscreen();
+});
+
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp

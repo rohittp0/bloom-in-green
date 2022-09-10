@@ -92,6 +92,14 @@
 
     }
   }
+
+  .scale-down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.001);
+    transition: all ease 500ms;
+  }
 }
 
 @media screen and (max-width: 390px) {
