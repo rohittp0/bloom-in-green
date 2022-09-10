@@ -94,6 +94,7 @@
     }
 
     .img2 {
+      filter: brightness(0.7);
       height: 30vh;
       aspect-ratio: 1;
       object-fit: cover;
@@ -196,6 +197,7 @@
         width: fit-content;
 
         img {
+          filter: brightness(0.7);
           height: 50vh;
           width: 55vw;
           aspect-ratio: 1;
