@@ -24,3 +24,91 @@
     }
   }
 }
+.history {
+  overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    text-align: center;
+    color: #1D4638;
+    margin: 2em 0 1.5em;
+    font: normal normal normal 42px/40px Sofia Pro;
+  }
+
+  .column {
+    max-width: max(100vw, 1000px);
+    margin: 0 1em;
+    margin-left: 9em;
+    p{
+      font: normal normal normal 25px/59px Sofia Pro;
+      opacity: 0.8;
+      color: #1D4638;
+      }
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 0.20rem 0;
+
+      -ms-overflow-style: none;
+      scrollbar-width: 0;
+
+      &::-webkit-scrollbar {
+        width: 1px;
+      }
+    }
+
+    img {
+      border-radius: 0.4em;
+      margin-right: 2em;
+      max-width: 17em;
+    }
+  }
+  button {
+    font: normal normal normal 20px/59px Sofia Pro;
+    color: grey;
+    background-color: transparent;
+    width: 29em;
+    text-align: center;
+    border: 2px solid grey;
+    height: 3em;
+   }
+  * {
+    box-sizing: border-box;
+  }
+  h1 {
+    text-align: center;
+  }
+  .outer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .inner-grid {
+    flex: 25%;
+    max-width: 25%;
+    border-left: solid black;
+    border-top: solid black;
+  }
+  .inner-grid img {
+    width: 100%;
+    border-bottom: solid black;
+  }
+  @media screen and (max-width: 800px) {
+    .inner-grid {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .inner-grid {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  }
+
