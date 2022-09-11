@@ -40,20 +40,51 @@
 </head>
 <body>
 
-<section class="hero hidden_sm">
-    <img src="/img/festival/bg.webp" alt="group photo" class="image-background">
+<section class="hero">
+    <img src="/img/festival/bg.webp" alt="group photo" class="image-background hidden_sm">
+    <img src="/img/festival/hero-bg.webp" alt="group photo" class="image-background hidden_lg">
 
-    <nav class="nav-menu">
-        <a href="/vision" class="hidden_sm">About Us</a>
-        <a href="/festival" class="hidden_sm">Festival 2022</a>
+    <nav class="nav-menu hidden_sm">
+        <a href="/vision">About Us</a>
+        <a href="/festival">Festival 2022</a>
         <a href="/" class="logo-link">
             <img src="/img/index/logo-mobile.webp" alt="logo">
         </a>
-        <a href="/gallery" class="hidden_sm">Gallery</a>
-        <a href="/#community" class="hidden_sm">Community</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/#community">Community</a>
     </nav>
 
-    <div class="content-row">
+    <nav class="hidden_lg ham-nav">
+        <div id="menuToggle">
+            <label for="fake" hidden>Placeholder</label>
+            <input type="checkbox" id="fake"/>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu" onclick="document.getElementById('fake').checked=false;">
+                <a href="/vision">
+                    <li>About Us</li>
+                </a>
+                <a href="/festival">
+                    <li>Festival 2022</li>
+                </a>
+                <a href="/gallery">
+                    <li>Gallery</li>
+                </a>
+                <a href="https://imjo.in/vvZ93K">
+                    <li>
+                        <button class="button-primary">
+                            Book Your Tickets
+                        </button>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-row hidden_sm">
         <img src="/img/index/logo-mobile.webp" alt="logo">
     </div>
 </section>
@@ -61,13 +92,13 @@
 <section class="history">
     <h3>Bloom In Green Throughout The years</h3>
 
-    <div class="container" >
+    <div class="container">
         <h4>2019</h4>
         <img src="/img/gallery/gal-img-1.webp" alt="gallery image" class="hidden_lg">
         <img src="/img/gallery/gal-img-1.webp" alt="gallery image" class="hidden_sm">
     </div>
 
-    <div class="container" >
+    <div class="container">
         <h4>2018</h4>
         <img src="/img/gallery/gal-img-1.webp" alt="gallery image" class="hidden_lg">
         <img src="/img/gallery/gal-img-1.webp" alt="gallery image" class="hidden_sm">

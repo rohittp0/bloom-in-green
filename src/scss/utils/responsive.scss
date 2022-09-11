@@ -47,13 +47,13 @@ section{
 
 @media screen and (min-width: 415px)  {
   .hidden_lg {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 415px) {
   .hidden_sm {
-    display: none;
+    display: none !important;
   }
 
   section {
