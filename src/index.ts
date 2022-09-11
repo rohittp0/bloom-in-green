@@ -146,6 +146,8 @@ video.addEventListener("ended", () =>
     return document.exitFullscreen();
 });
 
+document.querySelectorAll("video").forEach((v) => v.play());
+
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp
