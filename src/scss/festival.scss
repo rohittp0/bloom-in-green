@@ -10,15 +10,15 @@
   object-fit: cover;
 }
 
-.hero{
+.hero {
   height: 100vh;
 
-  .content-row{
+  .content-row {
     margin: 30vh 0 0;
     display: flex;
     justify-content: center;
 
-    img{
+    img {
       filter: invert(2%) sepia(7%) saturate(2759%) hue-rotate(321deg) brightness(103%) contrast(89%);
       transform: scale(1.5);
     }
@@ -31,7 +31,19 @@
   flex-direction: column;
   align-items: center;
 
-  h4 {
+  .container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 2em;
+
+    h4{
+      font: normal normal normal 22px/40px Sofia Pro;
+    }
+  }
+
+  h3 {
     text-align: center;
     color: #1D4638;
     margin: 2em 0 1.5em;
