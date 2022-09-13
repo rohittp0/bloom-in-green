@@ -1,6 +1,7 @@
 @import "../../utils/menu";
 
 .hero {
+  background: "/img/index/hero-placeholder.webp" no-repeat;
   padding: 1em 0;
   position: relative;
 
@@ -114,6 +115,7 @@
 
 @media screen and (max-width: 415px) {
   .hero {
+    background: "/img/index/hero-placeholder-mobile.webp" no-repeat;
     min-height: 100vh;
 
     .nav-menu {
