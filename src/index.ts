@@ -105,9 +105,10 @@ window.addEventListener("scroll", () =>
     document.body.style.setProperty("--scroll",
         String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), false);
 
-window.addEventListener("scroll", () =>
-    document.body.style.setProperty("--gallery-scroll",
-        String(getPercentOfView(gallery))), false);
+window.addEventListener("scroll", () =>{
+    const scroll = String(getPercentOfView(gallery));
+    document.body.style.setProperty("--gallery-scroll", scroll);
+});
 
 document.addEventListener('fullscreenchange', onFullScreenChange, false);
 document.addEventListener('webkitfullscreenchange', onFullScreenChange, false);

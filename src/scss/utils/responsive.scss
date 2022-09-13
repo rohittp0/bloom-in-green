@@ -47,6 +47,12 @@ section {
   overflow-x: clip;
 }
 
+.sticky {
+  position: sticky;
+  top:0;
+  z-index: 2;
+}
+
 @media screen and (min-width: 415px)  {
   .hidden_lg {
     display: none !important;
