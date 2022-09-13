@@ -41,8 +41,10 @@ body {
   width: 100%;
 }
 
-section{
+section {
   position: relative;
+  scroll-margin-top: -2rem;
+  overflow-x: clip;
 }
 
 @media screen and (min-width: 415px)  {
