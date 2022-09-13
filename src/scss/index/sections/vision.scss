@@ -45,6 +45,11 @@
 
     img{
       width: 70%;
+      transition: all ease 1s;
+
+      &:hover {
+        transform: rotateZ(360deg);
+      }
     }
   }
 }
