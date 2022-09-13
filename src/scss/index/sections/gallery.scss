@@ -14,7 +14,7 @@
 
   .image-track {
     position: relative;
-    height: 800vh;
+    height: 1200vh;
 
     .image-stack {
       display: flex;
@@ -26,14 +26,23 @@
       .animate {
         animation: shrink 1s linear;
         animation-play-state: paused;
-        animation-delay: calc((-0.7 + var(--gallery-scroll) / 2) * -1s);
+        animation-delay: calc((-1.5 + var(--gallery-scroll)) * -1s);
         animation-iteration-count: 1;
         animation-fill-mode: both;
       }
 
       .delay-1 {
-        animation-delay: calc((-1.5 + var(--gallery-scroll) / 2) * -1s);
+        animation-delay: calc((-4.5 + var(--gallery-scroll)) * -1s);
       }
+
+      .delay-2 {
+        animation-delay: calc((-3.5 + var(--gallery-scroll)) * -1s);
+      }
+
+      .delay-3 {
+        animation-delay: calc((-2.5 + var(--gallery-scroll)) * -1s);
+      }
+
 
       .img-div {
         display: flex;
@@ -47,7 +56,7 @@
         overflow: clip;
       }
 
-      .img-div .img-div .img-div {
+      .img-div .img-div .img-div .img-div .img-div {
         height: 65vh;
       }
     }
@@ -85,6 +94,8 @@
 
 @media screen and (max-width: 415px) {
   .gallery{
+    height: 400vh;
+
     .image-top{
       position: absolute;
       top:0;
@@ -92,6 +103,8 @@
     }
 
     .image-track{
+      height: 600vh;
+
       .image-stack{
         .img-div {
           border-width: 2px;
