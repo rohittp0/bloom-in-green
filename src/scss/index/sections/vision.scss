@@ -7,7 +7,8 @@
   align-items: center;
 
   .vision-left {
-    max-width: 50%;
+    width: min(150%, 1730px);
+    padding-left: 9em;
 
     h2 {
       font: normal normal normal 55px/110px KonTikiJF Aloha;
@@ -38,54 +39,12 @@
   }
 
   .circle-container {
-    @include on-circle(7, 30vw, 4em);
-
-    border: solid gold 0.5px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: start;
 
-    &:not(:focus-within) {
-      img:nth-child(1) {
-        box-shadow: 0 0 10px 7px #e1b03c;
-      }
-
-      .circle-center:nth-child(2) {
-        display: initial;
-      }
-    }
-
-    .circle-center {
-      align-self: center;
-      text-align: center;
-      display: none;
-
-      h6 {
-        font-size: 1.25em;
-        font-weight: 100;
-      }
-
-      p {
-        font-family: sans-serif;
-        font-size: 0.75em;
-        text-align: justify-all;
-        max-width: 20vw;
-      }
-    }
-
-
-    img {
-      object-fit: scale-down;
-      border-radius: 50%;
-      border: solid gold 2px;
-      transition: all 500ms;
-
-      &:focus {
-        box-shadow: 0 0 10px 7px #e1b03c;
-      }
-
-      &:focus + .circle-center {
-        display: initial;
-      }
+    img{
+      width: 70%;
     }
   }
 }
@@ -96,6 +55,7 @@
 
     .vision-left {
       max-width: 90%;
+      padding: 0;
 
       h2{
         text-align: center;
@@ -109,15 +69,7 @@
     }
 
     .circle-container {
-      @include on-circle(7, 70vw, 2.5em);
 
-      margin: 2rem 0 3rem 0;
-
-      .circle-center{
-        p {
-          max-width: 48vw;
-        }
-      }
     }
 
     .button-primary {

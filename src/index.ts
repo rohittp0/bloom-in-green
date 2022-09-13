@@ -1,11 +1,10 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 
-import {circleData, eventDetails} from "./utils/content";
+import {eventDetails} from "./utils/content";
 
 const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
-const circlesList = document.getElementById("circlesList") as HTMLDivElement;
 const gallery = document.getElementById("gallery") as HTMLDivElement;
 const video = document.getElementById("heroMovie") as HTMLIFrameElement;
 
@@ -56,20 +55,6 @@ function createEvent(image, title, description) {
     </li>`;
 }
 
-function createCircles() {
-    const elements = [];
-
-    for (const title in circleData)
-        elements.push(`
-    <img src="${circleData[title].img}" alt="" tabindex="1" width="22" height="22">
-    <div class="circle-center">
-        <h6>${title}</h6>
-        <p>${circleData[title].text}</p>
-    </div>`);
-
-    return elements.join("\n");
-}
-
 function getPercentOfView(element) {
     const viewTop = window.pageYOffset;
     const viewBottom = viewTop + window.innerHeight;
@@ -91,7 +76,6 @@ function getPercentOfView(element) {
         return (viewBottom - elementTop) / window.innerHeight;
 }
 
-circlesList.innerHTML = createCircles();
 newsList.innerHTML = createRows();
 eventsList.innerHTML = eventDetails
     .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, v[0], v[1]))
