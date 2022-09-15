@@ -12,7 +12,7 @@ function createSlides(image, title, content) {
     return `
         <div class="carousal-content">
             <div class="news-card">
-                <img src="${image}" alt="">
+                <img loading="lazy" src="${image}" alt="">
                 <h4>${title}</h4>
                 <a href="#">
                     <button>The Hindu</button>
@@ -46,7 +46,7 @@ function createEvent(image, title, description) {
     return `
     <li class="splide__slide">
         <div class="event-card">
-            <img src="${image}" alt="card image" class="event-image">
+            <img loading="lazy" src="${image}" alt="card image" class="event-image">
             <div class="hover-panel">
                 <h4>${title}</h4>
                 <p>${description}</p>
