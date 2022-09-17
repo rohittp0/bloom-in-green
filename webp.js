@@ -20,7 +20,7 @@ const html = getFiles(path.resolve("src/templates")).filter((html) => html.endsW
 
 images.forEach(async (img) =>
 {
-    const out = img.replace("\..+", ".webp");
+    const out = img.split(".")[0] + ".webp";
 
     await webp.cwebp(img, out);
     html.forEach((text) => text.replace(img, out));
