@@ -78,7 +78,7 @@ function getPercentOfView(element) {
 
 newsList.innerHTML = createRows();
 eventsList.innerHTML = eventDetails
-    .map((v, i) => createEvent(`/img/index/event/(${i+1}).jpg`, v[0], v[1]))
+    .map((v, i) => createEvent(`/img/index/event/(${i+1}).webp`, v[0], v[1]))
     .join("\n");
 
 new Splide(".news-slide", {
