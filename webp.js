@@ -18,10 +18,10 @@ function getFiles(dir) {
 const images = getFiles(path.resolve("public/img")).filter((img) => !img.endsWith(".webp"));
 const html = getFiles(path.resolve("src/templates")).filter((html) => html.endsWith(".html"));
 
-images.forEach((img) =>
+images.forEach(async (img) =>
 {
     const out = img.replace("\..+", ".webp");
 
+    await webp.cwebp(img, out);
     html.forEach((text) => text.replace(img, out));
-    return webp.cwebp(img, out);
 });
