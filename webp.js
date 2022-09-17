@@ -22,7 +22,10 @@ const noConvert = ["webp", "m4v", "mp4", "mkv"];
 const images = getFiles(path.resolve("public/img")).filter((img) => noConvert.indexOf(img.split(".")[1]) === -1);
 const html = getFiles(path.resolve("src/templates")).filter((html) => html.endsWith(".html"));
 
-images.forEach((img) => webp.cwebp(img, img.split(".")[0] + ".webp"));
+images.forEach(async (img) => {
+    await webp.cwebp(img, img.split(".")[0] + ".webp");
+    fs.unlink(img, console.log);
+});
 
 html.forEach(async (p) =>{
     let content = fs.readFileSync(p, 'utf8');
