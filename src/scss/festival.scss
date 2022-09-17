@@ -30,7 +30,7 @@
 }
 
 .history {
-  overflow-x: hidden;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   align-items: center;
