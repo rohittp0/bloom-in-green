@@ -14,7 +14,7 @@ body {
 }
 
 .clip-x{
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .button-primary {
@@ -44,7 +44,7 @@ body {
 section {
   position: relative;
   scroll-margin-top: -2rem;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .sticky {

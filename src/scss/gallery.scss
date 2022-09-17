@@ -1,7 +1,7 @@
 @import "utils/responsive";
 
 .gallery {
-  overflow-x: clip;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@
 @media screen and (max-width: 415px) {
   .gallery {
     display: unset;
-    overflow-x: clip;
+    overflow-x: hidden;
 
     .grass-img {
       object-fit: fill;
