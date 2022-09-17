@@ -1,7 +1,7 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 
-import {eventDetails} from "./utils/content";
+import {eventDetails, srcsetSizes} from "./utils/content";
 
 const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
@@ -24,29 +24,35 @@ function createSlides(image, title, content) {
     `;
 }
 
-function createRows() {
-    const colPerRow = 3;
-
-    let cols = [];
-    const rows = []
-
-    for (let i = 0; i < 10; i++) {
-        cols.push(createSlides("/img/index/news-card.webp", "The news title", "News content"));
-
-        if (i % colPerRow === 0) {
-            rows.push(`<li class="splide__slide carousal-slide">${cols.join("\n")}</li>`);
-            cols = [];
-        }
-    }
-
-    return rows.reverse().join("\n");
-}
+// function createRows() {
+//     const colPerRow = 3;
+//
+//     let cols = [];
+//     const rows = []
+//
+//     for (let i = 0; i < 10; i++) {
+//         cols.push(createSlides("/img/index/news-card.webp", "The news title", "News content"));
+//
+//         if (i % colPerRow === 0) {
+//             rows.push(`<li class="splide__slide carousal-slide">${cols.join("\n")}</li>`);
+//             cols = [];
+//         }
+//     }
+//
+//     return rows.reverse().join("\n");
+// }
 
 function createEvent(image, title, description) {
+    const parts = image.split("/");
+    const name = parts.pop();
+    const path = parts.join("/");
+
+    const srcset = srcsetSizes.map((size) => `${name}/${size}/${path} ${size}w`).join(",");
+
     return `
     <li class="splide__slide">
         <div class="event-card">
-            <img loading="lazy" src="${image}" alt="card image" class="event-image">
+            <img loading="lazy" src="${image}" srcset="${srcset}" alt="card image" class="event-image">
             <div class="hover-panel">
                 <h4>${title}</h4>
                 <p>${description}</p>
@@ -76,16 +82,17 @@ function getPercentOfView(element) {
         return (viewBottom - elementTop) / window.innerHeight;
 }
 
-newsList.innerHTML = createRows();
+// newsList.innerHTML = createRows();
+
 eventsList.innerHTML = eventDetails
     .map((v, i) => createEvent(`/img/index/event/(${i+1}).webp`, v[0], v[1]))
     .join("\n");
 
-new Splide(".news-slide", {
-    classes: {
-        arrow: "splide__arrow news-arrow"
-    }
-}).mount();
+// new Splide(".news-slide", {
+//     classes: {
+//         arrow: "splide__arrow news-arrow"
+//     }
+// }).mount();
 
 new Splide(".event-slide", {
     classes: {
