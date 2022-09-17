@@ -140,6 +140,8 @@ video.addEventListener("ended", () =>
 
 document.querySelectorAll("video").forEach((v) => v.play());
 
+if(window.innerWidth > 414)
+    (document.getElementById("videoDesktop") as HTMLVideoElement).src = "/img/index/web-banner.m4v";
 
 console.log(`%cDeveloped by
     Rohit  : https://www.linkedin.com/in/rohit-tp
