@@ -5,6 +5,10 @@
   padding: 1em 0;
   position: relative;
 
+  .image-background{
+    z-index: -5;
+  }
+
   button {
     font: normal normal normal 30px/36px KonTikiJF Aloha;
     text-transform: capitalize;
