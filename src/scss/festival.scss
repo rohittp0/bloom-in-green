@@ -18,10 +18,13 @@
     margin: 30vh 0 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
 
     img {
       filter: invert(2%) sepia(7%) saturate(2759%) hue-rotate(321deg) brightness(103%) contrast(89%);
-      transform: scale(1.5);
+      max-width: 485px;
     }
   }
 }
@@ -40,7 +43,7 @@
     margin-bottom: 2em;
 
     h4{
-      font: normal normal normal 22px/40px Sofia Pro;
+      font: normal normal normal 22px/40px KonTikiJF Aloha;
     }
 
     .scroll-grid{
@@ -75,14 +78,26 @@
     text-align: center;
     color: #1D4638;
     margin: 2em 0 1.5em;
-    font: normal normal normal 42px/40px Sofia Pro;
+    font: normal normal normal 42px/40px KonTikiJF Aloha;
   }
 }
 
 @media screen and (max-width: 415px) {
+  .hero {
+    .content-row {
+      img{
+        margin-top: 2em;
+      }
+
+      p{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   .history{
     h3{
-      font: normal normal normal 30px/35px Sofia Pro;
+      font: normal normal normal 30px/35px KonTikiJF Aloha;
     }
 
     .container{
