@@ -3,26 +3,26 @@ import Splide from "@splidejs/splide";
 
 import {eventDetails, srcsetSizes} from "./utils/content";
 
-const newsList = document.getElementById("newsList") as HTMLUListElement;
+// const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
 const gallery = document.getElementById("gallery") as HTMLDivElement;
 const video = document.getElementById("heroMovie") as HTMLIFrameElement;
 
-function createSlides(image, title, content) {
-    return `
-        <div class="carousal-content">
-            <div class="news-card">
-                <img loading="lazy" src="${image}" alt="">
-                <h4>${title}</h4>
-                <a href="#">
-                    <button>The Hindu</button>
-                </a>
-                <p>${content}</p>
-
-            </div>
-        </div>
-    `;
-}
+// function createSlides(image, title, content) {
+//     return `
+//         <div class="carousal-content">
+//             <div class="news-card">
+//                 <img loading="lazy" src="${image}" alt="">
+//                 <h4>${title}</h4>
+//                 <a href="#">
+//                     <button>The Hindu</button>
+//                 </a>
+//                 <p>${content}</p>
+//
+//             </div>
+//         </div>
+//     `;
+// }
 
 // function createRows() {
 //     const colPerRow = 3;
