@@ -103,16 +103,16 @@ new Splide(".community-slide", {
 
 window.addEventListener("scroll", () =>
     document.body.style.setProperty("--scroll",
-        String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), false);
+        String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), {passive: true});
 
 window.addEventListener("scroll", () =>{
     const scroll = String(getPercentOfView(gallery));
     document.body.style.setProperty("--gallery-scroll", scroll);
-});
+}, {passive: true});
 
-document.addEventListener('fullscreenchange', onFullScreenChange, false);
-document.addEventListener('webkitfullscreenchange', onFullScreenChange, false);
-document.addEventListener('mozfullscreenchange', onFullScreenChange, false);
+document.addEventListener('fullscreenchange', onFullScreenChange, {passive: true});
+document.addEventListener('webkitfullscreenchange', onFullScreenChange, {passive: true});
+document.addEventListener('mozfullscreenchange', onFullScreenChange, {passive: true});
 
 function onFullScreenChange() {
     // @ts-ignore
@@ -129,7 +129,7 @@ video.addEventListener("ended", () =>
 {
     video.classList.add("scale-down");
     return document.exitFullscreen();
-});
+}, {passive: true});
 
 document.querySelectorAll("video").forEach((v) => v.play());
 
