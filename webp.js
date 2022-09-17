@@ -15,16 +15,23 @@ function getFiles(dir) {
     });
 }
 
-const images = getFiles(path.resolve("public/img")).filter((img) => !img.endsWith(".webp"));
+const base = path.resolve("public");
+
+const noConvert = ["webp", "m4v", "mp4", "mkv"];
+
+const images = getFiles(path.resolve("public/img")).filter((img) => noConvert.indexOf(img.split(".")[1]) === -1);
 const html = getFiles(path.resolve("src/templates")).filter((html) => html.endsWith(".html"));
 
-images.forEach(async (img) => {
-    const out = img.split(".")[0] + ".webp";
+// images.forEach((img) => webp.cwebp(img, img.split(".")[0] + ".webp"));
 
-    await webp.cwebp(img, out);
+html.forEach(async (p) =>{
+    const content = fs.readFileSync(p, 'utf8');
 
-    for (const html_path of html)
-        fs.writeFile(html_path, fs.readFileSync(html_path, 'utf8').replaceAll(img, out),
-            'utf8', () => null);
+    images.forEach((img) =>
+    {
+        img = img.replace(base+"\\", "/").replaceAll("\\\\", "/");
+        content.replaceAll(img, img.split(".")[0] + ".webp");
+    });
 
-});
+    fs.writeFile(p, content, 'utf8', console.log);
+})
