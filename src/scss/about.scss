@@ -43,6 +43,12 @@
   }
 }
 
+@supports(overflow-x: clip){
+  section{
+    overflow-x: clip;
+  }
+}
+
 @media screen and (max-width: 415px) {
   .about {
 

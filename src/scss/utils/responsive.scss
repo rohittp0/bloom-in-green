@@ -53,6 +53,12 @@ section {
   z-index: 2;
 }
 
+@supports(overflow-x: clip){
+  section{
+    overflow-x: clip;
+  }
+}
+
 @media screen and (min-width: 415px)  {
   .hidden_lg {
     display: none !important;
