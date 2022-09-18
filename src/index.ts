@@ -47,7 +47,7 @@ function createEvent(image, title, description) {
     const name = parts.pop();
     const path = parts.join("/");
 
-    const srcset = srcsetSizes.map((size) => `${name}/${size}/${path} ${size}w`).join(",");
+    const srcset = srcsetSizes.map((size) => `${path}/${size}/${name} ${size}w`).join(",");
 
     return `
     <li class="splide__slide">
