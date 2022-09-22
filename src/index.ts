@@ -148,4 +148,4 @@ console.log(`%cDeveloped by
     Varsha : https://www.linkedin.com/in/varsha-shaheen-a10295231`,
     "background-color:black;border-left: solid red 8px;color:white;padding:10px;border-radius:5px");
 
-window["CollectId"] = "631b654d59596851e282d550";
+window["CollectId"] = "5dba3e23a3d4732f9663f473";
