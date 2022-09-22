@@ -1,5 +1,5 @@
 server {
-        root /home/user/bloom-in-green;
+        root /home/ubuntu/bloom-in-green;
 
         # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;
