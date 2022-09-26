@@ -39,7 +39,7 @@
       align-items: center;
     }
 
-    #joinUsButton, #joinUsInput {
+    .join-submit, #joinUsInput {
       border: none;
       border-radius: 10px 0 0 10px;
       padding: 0.5rem;
@@ -48,7 +48,7 @@
       letter-spacing: 0;
     }
 
-    #joinUsButton {
+    .join-submit {
       border-radius: 0 10px 10px 0;
       background: #1D4638;
       width: auto;
@@ -72,7 +72,7 @@
     }
 
     .join-form {
-      #joinUsButton, #joinUsInput {
+      .join-submit, #joinUsInput {
         border-radius: 0;
         font: normal normal normal 10px Sofia Pro;
       }
