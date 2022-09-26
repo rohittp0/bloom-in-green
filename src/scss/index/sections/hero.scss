@@ -5,6 +5,42 @@
   padding: 1em 0;
   position: relative;
 
+  .hidden {
+    bottom: -100px !important;
+  }
+
+  .banner{
+    transition: all ease 1s;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0.5rem;
+    background: #eaea60;
+    display: flex;
+    z-index: 4;
+    justify-content: space-between;
+
+    h3{
+      font-family: Sofia Pro, serif;
+      font-weight: bold;
+    }
+
+    button{
+      background: transparent;
+      padding-top: 0;
+      padding-bottom: 0;
+      color: #232323;
+
+      &:hover {
+        background-color: transparent;
+        color: #232323;
+        box-shadow: unset;
+        scale: 1.1;
+      }
+    }
+  }
+
   .image-background{
     z-index: -5;
   }

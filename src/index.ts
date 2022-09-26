@@ -5,8 +5,10 @@ import {eventDetails, srcsetSizes} from "./utils/content";
 
 // const newsList = document.getElementById("newsList") as HTMLUListElement;
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
-const gallery = document.getElementById("gallery") as HTMLDivElement;
+// const gallery = document.getElementById("gallery") as HTMLDivElement;
 const video = document.getElementById("heroMovie") as HTMLIFrameElement;
+const close = document.getElementById("closeBanner") as HTMLButtonElement;
+const banner = document.getElementById("banner") as HTMLDivElement;
 
 // function createSlides(image, title, content) {
 //     return `
@@ -61,26 +63,26 @@ function createEvent(image, title, description) {
     </li>`;
 }
 
-function getPercentOfView(element) {
-    const viewTop = window.pageYOffset;
-    const viewBottom = viewTop + window.innerHeight;
-    const rect = element.getBoundingClientRect();
-    const elementTop = rect.top + viewTop;
-    const elementBottom = elementTop + rect.height;
-
-    if (elementBottom <= viewTop)
-        return -1;
-    else if (elementTop >= viewBottom)
-        return 0.3;
-
-    else if (elementBottom <= viewBottom) {
-        if (elementTop < viewTop || true)
-            return (elementBottom - viewTop) / window.innerHeight ;
-        else
-            return (elementBottom - elementTop) / window.innerHeight ;
-    } else
-        return (viewBottom - elementTop) / window.innerHeight;
-}
+// function getPercentOfView(element) {
+//     const viewTop = window.pageYOffset;
+//     const viewBottom = viewTop + window.innerHeight;
+//     const rect = element.getBoundingClientRect();
+//     const elementTop = rect.top + viewTop;
+//     const elementBottom = elementTop + rect.height;
+//
+//     if (elementBottom <= viewTop)
+//         return -1;
+//     else if (elementTop >= viewBottom)
+//         return 0.3;
+//
+//     else if (elementBottom <= viewBottom) {
+//         if (elementTop < viewTop || true)
+//             return (elementBottom - viewTop) / window.innerHeight ;
+//         else
+//             return (elementBottom - elementTop) / window.innerHeight ;
+//     } else
+//         return (viewBottom - elementTop) / window.innerHeight;
+// }
 
 // newsList.innerHTML = createRows();
 
@@ -108,14 +110,14 @@ new Splide(".community-slide", {
     autoWidth: false
 }).mount();
 
-window.addEventListener("scroll", () =>
-    document.body.style.setProperty("--scroll",
-        String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), {passive: true});
-
-window.addEventListener("scroll", () =>{
-    const scroll = String(getPercentOfView(gallery));
-    document.body.style.setProperty("--gallery-scroll", scroll);
-}, {passive: true});
+// window.addEventListener("scroll", () =>
+//     document.body.style.setProperty("--scroll",
+//         String(window.pageYOffset / (gallery.offsetTop - gallery.offsetHeight))), {passive: true});
+//
+// window.addEventListener("scroll", () =>{
+//     const scroll = String(getPercentOfView(gallery));
+//     document.body.style.setProperty("--gallery-scroll", scroll);
+// }, {passive: true});
 
 document.addEventListener('fullscreenchange', onFullScreenChange, {passive: true});
 document.addEventListener('webkitfullscreenchange', onFullScreenChange, {passive: true});
@@ -137,6 +139,8 @@ video.addEventListener("ended", () =>
     video.classList.add("scale-down");
     return document.exitFullscreen();
 }, {passive: true});
+
+close.addEventListener("click", () => banner.classList.add("hidden"));
 
 document.querySelectorAll("video").forEach((v) => v.play());
 
