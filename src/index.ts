@@ -9,16 +9,12 @@ const close = document.getElementById("closeBanner") as HTMLButtonElement;
 const banner = document.getElementById("banner") as HTMLDivElement;
 
 function createEvent(image, title, description) {
-    const parts = image.split("/");
-    const name = parts.pop();
-    const path = parts.join("/");
-
-    const srcset = srcsetSizes.map((size) => `${path}/${size}/${name} ${size}w`).join(",");
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
     return `
     <li class="splide__slide">
         <div class="event-card">
-            <img loading="lazy" src="${image}" srcset="${srcset}" alt="card image" class="event-image">
+            <img loading="lazy" src="${image}?w=${Math.min(35*vw, 420)}" alt="card image" class="event-image">
             <div class="hover-panel">
                 <h4>${title}</h4>
                 <p>${description}</p>
