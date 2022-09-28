@@ -13,5 +13,3 @@ export const eventDetails = [
     ["Stories Worth Sharing", "Session"],
     ["Contact Improvisation.", "Session"]
 ]
-
-export const srcsetSizes = [1440, 1024, 768, 410, 375, 390, 230]
