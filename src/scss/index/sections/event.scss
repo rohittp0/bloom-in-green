@@ -52,7 +52,7 @@
     }
 
     .hover-panel {
-      background: url("/img/index/hover-pane.png") no-repeat top;
+      background: url("https://rohittp.imgix.net/index/hover-pane.png") no-repeat top;
       background-clip: border-box;
       position: absolute;
       display: flex;
@@ -133,7 +133,12 @@
       }
 
       .hover-panel{
-        display: none;
+        opacity: 1;
+        margin-left: 10px;
+
+        h4{
+          padding-bottom: 0;
+        }
       }
     }
 
