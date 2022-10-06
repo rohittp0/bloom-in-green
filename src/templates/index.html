@@ -43,8 +43,7 @@
 <body>
 
 <section class="hero">
-    <video src="" class="bg-video hidden_sm" autoplay loop muted id="videoDesktop"></video>
-    <video src="" class="bg-video hidden_lg" autoplay loop muted id="videoMobile"></video>
+    <video src="" class="bg-video" autoplay loop muted id="videoBg"></video>
 
     <img loading="eager" src="https://rohittp.imgix.net/index/hero-placeholder-mobile.webp"
          srcset="https://rohittp.imgix.net/index/hero-placeholder-mobile.webp?w=410&fit=max 410w, https://rohittp.imgix.net/index/hero-placeholder-mobile.webp?w=375&fit=max 375w, https://rohittp.imgix.net/index/hero-placeholder-mobile.webp?w=390&fit=max 390w, https://rohittp.imgix.net/index/hero-placeholder-mobile.webp?w=230&fit=max 230w"
@@ -123,7 +122,7 @@
             </button>
         </a>
     </div>
-    <div class="banner" id="banner">
+    <div class="banner hidden_sm hidden_lg" id="banner">
         <h3>Early bird closing soon</h3>
         <button id="closeBanner">🗙</button>
     </div>

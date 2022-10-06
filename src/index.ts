@@ -10,6 +10,7 @@ const close = document.getElementById("closeBanner") as HTMLButtonElement;
 const banner = document.getElementById("banner") as HTMLDivElement;
 const form = document.getElementById("joinUsForm") as HTMLFormElement;
 const emailInput = document.getElementById("joinUsInput") as HTMLInputElement;
+const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
 
 function createEvent(image, title, description) {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -82,16 +83,11 @@ form.addEventListener("submit", (e) => {
 
 close.addEventListener("click", () => banner.classList.add("hidden"));
 
-document.querySelectorAll("video").forEach((v) => v.play());
-
 if (window.innerWidth > 414)
-    (document.getElementById("videoDesktop") as HTMLVideoElement).src = "/img/index/web-banner.m4v";
+    videoBg.src = "https://rohittp.imgix.net/index/web-banner.m4v";
 else
-    (document.getElementById("videoMobile") as HTMLVideoElement).src = "/img/index/web-banner-mobile.m4v";
+    videoBg.src = "https://rohittp.imgix.net/index/web-banner-mobile.m4v";
 
-console.log(`%cDeveloped by
-    Rohit  : https://www.linkedin.com/in/rohit-tp
-    Varsha : https://www.linkedin.com/in/varsha-shaheen-a10295231`,
-    "background-color:black;border-left: solid red 8px;color:white;padding:10px;border-radius:5px");
+videoBg.play().catch((e) => console.error(e));
 
 window["CollectId"] = "5dba3e23a3d4732f9663f473";
