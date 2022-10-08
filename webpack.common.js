@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
 
 const fs = require("fs");
 
@@ -13,7 +14,7 @@ const pages = fs.readdirSync(path.resolve(__dirname, "./src/templates/"), {withF
 
 module.exports = {
     entry: pages.reduce((config, page) => {
-        if(fs.existsSync(path.resolve(`./src/${page}.ts`)))
+        if (fs.existsSync(path.resolve(`./src/${page}.ts`)))
             config[page] = `./src/${page}.ts`;
         return config;
     }, {}),
@@ -66,5 +67,9 @@ module.exports = {
                 })
         ),
         new MiniCssExtractPlugin({filename: "styles.[contenthash].css"}),
+        new SitemapPlugin({
+            base: "https://bloomingreenfestival.com",
+            paths: pages.map((p) => `/${p.replace("index", "")}`)
+        })
     ]
 };
