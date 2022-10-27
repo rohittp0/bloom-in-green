@@ -44,7 +44,7 @@ const community_sessions = [
 ];
 
 export const lineUP = {
-    root: "/img/festival/lineup",
+    root: "https://rohittp.imgix.net/festival/lineup",
     categories: {
         workshops,
         community_sessions
