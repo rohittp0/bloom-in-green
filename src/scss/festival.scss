@@ -135,13 +135,33 @@
         overflow-x: scroll;
       }
 
-      img {
-        border-radius: 0.4em;
-        margin-right: 2em;
-        max-width: 250px;
-        aspect-ratio: 1;
+      .card-image {
         scroll-snap-align: center;
+        margin-right: 2em;
+        border-radius: 0.4em;
+        position: relative;
+
+        img {
+          border-radius: 0.4em;
+          width: 250px;
+          aspect-ratio: 1;
+        }
+
+        p {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 1.7rem;
+          left: 20px;
+          max-width: calc(250px - (20px * 2));
+
+          font-size: 1rem;
+          color: #FFFFFF;
+          font-weight: bold;
+          line-height: 1.5rem;
+        }
       }
+
+
     }
   }
 
@@ -149,7 +169,7 @@
     font: normal normal normal 20px/59px Sofia Pro;
     color: grey;
     background-color: transparent;
-    width: 29em;
+    width: min(29em, 95vw);
     text-align: center;
     border: 2px solid grey;
     height: 3em;
@@ -171,14 +191,23 @@
   }
 
   .lineup {
-    .column{
-      .row{
+    .column {
+      overflow-x: auto;
+
+      .row {
         overflow: auto;
 
-        img {
+        .card-image {
           padding: 0;
           margin: 0;
-          max-width: 100vw;
+
+          img {
+            width: 100vw;
+          }
+
+          p{
+            max-width: calc(100vw - (20px * 2));
+          }
         }
       }
     }
