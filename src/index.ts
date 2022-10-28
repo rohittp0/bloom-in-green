@@ -89,5 +89,3 @@ else
     videoBg.src = "https://rohittp.imgix.net/index/web-banner-mobile.m4v";
 
 videoBg.play().catch((e) => console.error(e));
-
-window["CollectId"] = "5dba3e23a3d4732f9663f473";
