@@ -34,5 +34,5 @@ function generateRow(root, names, key) {
 const rows = Object.keys(lineUP.categories).map((key) =>
     generateRow(root, lineUP.categories[key], key));
 
-div.innerHTML = div.innerHTML.replace("<!--IMAGE_GRIDS-->", rows.join(""))
+div.innerHTML = div.innerHTML.replace("<span data-id=\"image-grid\"></span>", rows.join(""))
 
