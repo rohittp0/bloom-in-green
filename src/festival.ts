@@ -36,3 +36,4 @@ const rows = Object.keys(lineUP.categories).map((key) =>
 
 div.innerHTML = div.innerHTML.replace("<span data-id=\"image-grid\"></span>", rows.join(""))
 
+window["CollectId"] = "5dba3e23a3d4732f9663f473";

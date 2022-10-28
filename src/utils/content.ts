@@ -27,12 +27,12 @@ const workshops = [
     "Acroyoga",
     "Handpan Circle",
     "Belly Dance",
-    "",
+    "Conscious Dating",
     "Music Production",
     "Clowning",
     "Dapo Star",
-    "Petrichor",
-    "Miyawaki",
+    "Food foraging and Herbal mixes",
+    "Miyawaki forest making",
     "Slacklining"
 ]
 
