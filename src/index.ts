@@ -1,5 +1,7 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
 
 import {eventDetails} from "./utils/content";
 import swal from "sweetalert";
@@ -11,6 +13,7 @@ const banner = document.getElementById("banner") as HTMLDivElement;
 const form = document.getElementById("joinUsForm") as HTMLFormElement;
 const emailInput = document.getElementById("joinUsInput") as HTMLInputElement;
 const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
+
 
 function createEvent(image, title, description) {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -38,16 +41,23 @@ new Splide(".event-slide", {
         arrow: "splide__arrow events-arrow"
     },
     autoWidth: true,
-    autoplay: true
-}).mount();
+    autoScroll: {
+        speed: 0.5,
+    }
+}).mount( { AutoScroll } );
 
 new Splide(".community-slide", {
     classes: {
         arrow: "splide__arrow events-arrow"
     },
+    type   : 'loop',
+    drag   : 'free',
+    focus  : 'center',
     autoWidth: false,
-    autoplay: true
-}).mount();
+    autoScroll: {
+        speed: 0.2,
+    }
+}).mount( { AutoScroll } );
 
 
 document.addEventListener('fullscreenchange', onFullScreenChange, {passive: true});
