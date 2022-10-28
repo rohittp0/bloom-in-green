@@ -37,14 +37,16 @@ new Splide(".event-slide", {
     classes: {
         arrow: "splide__arrow events-arrow"
     },
-    autoWidth: true
+    autoWidth: true,
+    autoplay: true
 }).mount();
 
 new Splide(".community-slide", {
     classes: {
         arrow: "splide__arrow events-arrow"
     },
-    autoWidth: false
+    autoWidth: false,
+    autoplay: true
 }).mount();
 
 
