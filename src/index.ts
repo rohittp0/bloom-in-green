@@ -1,8 +1,6 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-
-
 import {eventDetails} from "./utils/content";
 import swal from "sweetalert";
 

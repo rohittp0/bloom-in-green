@@ -14,6 +14,14 @@ export const eventDetails = [
     ["Contact Improvisation.", "Session"]
 ];
 
+const artists = [
+    "Bonny Abraham Ensemble",
+    "Easy Wanderlings",
+    "Frizzell Dsouza",
+    "Jatayu",
+    "Shanka Tribe"
+]
+
 const workshops = [
     "Handpan first touch",
     "Make Your Own Hemp Paper",
@@ -46,6 +54,7 @@ const community_sessions = [
 export const lineUP = {
     root: "https://rohittp.imgix.net/festival/lineup",
     categories: {
+        artists,
         workshops,
         community_sessions
     }
