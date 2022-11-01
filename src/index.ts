@@ -1,7 +1,7 @@
 import "@splidejs/splide/css/sea-green";
 import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import {eventDetails} from "./utils/content";
+import {eventDetails, lineUP} from "./utils/content";
 import swal from "sweetalert";
 
 const eventsList = document.getElementById("eventsList") as HTMLUListElement;
@@ -19,7 +19,7 @@ function createEvent(image, title, description) {
     return `
     <li class="splide__slide">
         <div class="event-card">
-            <img loading="lazy" src="${image}?w=${Math.min(35 * vw, 420)}" alt="card image" class="event-image">
+            <img loading="lazy" src="${image}?w=${Math.min(35 * vw, 420)}" alt="${title}" class="event-image">
             <div class="hover-panel">
                 <h4>${title}</h4>
                 <p>${description}</p>
@@ -28,10 +28,18 @@ function createEvent(image, title, description) {
     </li>`;
 }
 
-eventsList.innerHTML = eventDetails
-    .map((v, i) =>
-        createEvent(`https://rohittp.imgix.net/img/index/event/(${i + 1}).webp`, v[0], v[1]))
-    .join("\n");
+function generateRow(root, names, key) {
+    const title = key.toUpperCase().replaceAll("_", " ")
+    const images = names.map((name, i) => eventDetails.includes(name) ?
+        createEvent(`${root}/${key}/${i + 1}.webp`,name, title) : "");
+
+    return images.join("\n")
+}
+
+const rowsHtml = Object.keys(lineUP.categories).map((key) =>
+    generateRow(lineUP.root, lineUP.categories[key], key));
+
+eventsList.innerHTML = rowsHtml.join("\n");
 
 
 new Splide(".event-slide", {
