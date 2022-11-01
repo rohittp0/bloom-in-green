@@ -1,50 +1,4 @@
-@import "index/sections/hero";
 @import "utils/responsive";
-
-.image-background {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero {
-  height: 100vh;
-
-  .content-row {
-    margin: 30vh 0 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-
-    .arrow {
-      text-align: center;
-      margin: 8% 0;
-
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
-      }
-    }
-
-    .bounce {
-      -moz-animation: bounce 2s infinite;
-      -webkit-animation: bounce 2s infinite;
-      animation: bounce 2s infinite;
-    }
-
-    img {
-      filter: invert(2%) sepia(7%) saturate(2759%) hue-rotate(321deg) brightness(103%) contrast(89%);
-      max-width: 485px;
-    }
-  }
-}
 
 .history {
   overflow-x: clip;
@@ -135,9 +89,6 @@
       padding-bottom: 0.5rem;
       -ms-overflow-style: -ms-autohiding-scrollbar;
 
-      scroll-snap-type: x mandatory;
-
-
       &::-webkit-scrollbar {
         height: 0.5rem;
       }
@@ -181,39 +132,12 @@
 
     }
   }
-
-  button {
-    font: normal normal normal 20px/59px Sofia Pro;
-    color: grey;
-    background-color: transparent;
-    width: min(29em, 95vw);
-    text-align: center;
-    border: 2px solid grey;
-    height: 3em;
-  }
 }
 
 @media screen and (max-width: 415px) {
-  .hero {
-    .content-row {
-      img {
-        margin-top: 2em;
-        width: 70%;
-      }
-
-      p {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
   .lineup {
     .column {
-      overflow-x: auto;
-
       .row {
-        overflow: auto;
-
         .card-image {
           padding: 0;
           margin: 0;
@@ -247,17 +171,5 @@
       }
 
     }
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
   }
 }
