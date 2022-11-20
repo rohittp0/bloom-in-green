@@ -11,11 +11,14 @@ export const eventDetails = [
 ];
 
 const artists = [
-    "Bonny Abraham Ensemble",
+    "Taba Chake",
     "Easy Wanderlings",
     "Frizzell Dsouza",
     "Jatayu",
-    "Shanka Tribe"
+    "Bonny Abraham Ensemble",
+    "Shanka Tribe",
+    "Ysquar3",
+    "Weird Sounding Dude"
 ]
 
 const workshops = [
