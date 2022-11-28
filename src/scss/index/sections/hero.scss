@@ -86,7 +86,7 @@
     }
 
     img {
-      width: 11rem;
+      width: 8rem;
     }
   }
 
@@ -122,6 +122,7 @@
     margin-left: 5em;
     margin-top: 1rem;
     margin-bottom: 5em;
+    flex-direction: column;
 
     h1 {
       color: #FFFFFF;
@@ -132,6 +133,19 @@
       color: #FFFFFF;
       font-size: 1.5rem;
     }
+
+    img {
+      width: 5em;
+      filter: invert(1);
+    }
+  }
+
+  .margin-zero{
+    margin: -1.5em 1em 5em -1em
+  }
+
+  .text_075{
+    font-size: 0.75rem !important;
   }
 
   .bg-video {
@@ -180,7 +194,8 @@
 
         img {
           width: 80%;
-          margin-top: 30%;
+          margin-top: 21%;
+          margin-bottom: 0.5em;
         }
       }
     }
@@ -197,6 +212,10 @@
 
     .content-row {
       margin: unset;
+
+      img {
+        width: 50%;
+      }
 
       h1 {
         font: normal normal normal 35px/40px KonTikiJF Aloha;
