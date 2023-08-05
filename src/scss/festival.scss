@@ -7,23 +7,6 @@
     img{
       margin: 1em 0 -1.2em 0;
     }
-
-    .kappa-block{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      p {
-        font-size: 0.5rem;
-        color: #FFFFFF;
-      }
-      img{
-        margin: 0;
-        width: 70px;
-        filter: invert(100%);
-      }
-    }
   }
 }
 
@@ -165,22 +148,6 @@
   .header {
     .title-bar{
       flex-direction: column;
-
-      .kappa-block{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        p {
-          font-size: 0.5rem;
-          color: #FFFFFF;
-        }
-        img{
-          width: 20%;
-          filter: invert(100%);
-        }
-      }
     }
   }
 
