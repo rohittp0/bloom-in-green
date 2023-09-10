@@ -46,7 +46,6 @@ document.querySelectorAll('.row').forEach((row) => {
         const max = row.scrollLeft + (window.innerWidth > 415 ? 250 : window.innerWidth);
 
         for (let i = row.scrollLeft; i <= max+1; i+= scrollStep) {
-            console.log(i)
             row.scrollTo(i, 0);
             await sleep(slideTime / max);
         }
