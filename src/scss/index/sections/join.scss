@@ -25,43 +25,25 @@
     filter: brightness(50%);
   }
 
-  .join-form {
+  .join-socials {
     display: flex;
-    align-items: baseline;
     justify-content: center;
-    width: 100%;
-    position: absolute;
-    bottom: 20%;
+    gap: 3rem;
 
-    form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .join-submit, #joinUsInput {
-      border: none;
-      border-radius: 10px 0 0 10px;
-      padding: 0.5rem;
-      width: min(40vw, 450px);
-      font: normal normal normal 20px Sofia Pro;
-      letter-spacing: 0;
-    }
-
-    .join-submit {
-      border-radius: 0 10px 10px 0;
-      background: #1D4638;
-      width: auto;
-      padding: 0.5rem 1rem;
-      color: #FFFFFF;
+    img:hover {
       cursor: pointer;
+      transform: scale(1.05);
+      transition: all 0.05s ease-in-out;
     }
-
   }
 }
 
 @media screen and (max-width: 415px) {
   .join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .center-white {
       font: normal normal normal 22px/29px KonTikiJF Aloha, Sofia Pro, sans-serif;
       padding: 0.8em;
@@ -71,14 +53,13 @@
       }
     }
 
-    .join-form {
-      .join-submit, #joinUsInput {
-        border-radius: 0;
-        font: normal normal normal 10px Sofia Pro;
-      }
+    .join-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
 
-      #joinUsInput {
-        width: 50vw;
+      img {
+        width: 60px;
       }
     }
   }
