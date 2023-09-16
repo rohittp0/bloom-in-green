@@ -6,3 +6,5 @@ setTimeout(() => {
 
     button.click();
 }, 25000)
+
+export {}
