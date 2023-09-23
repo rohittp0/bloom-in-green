@@ -1,1 +1,0 @@
-(()=>{"use strict";setTimeout((()=>{let t=document.getElementById("chat-bot-launcher-button");for(;!t;)t=document.getElementById("chat-bot-launcher-button");t.click()}),25e3)})();
