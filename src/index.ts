@@ -5,12 +5,12 @@ import {eventDetails, lineUP} from "./utils/content";
 import swal from "sweetalert";
 
 // const eventsList = document.getElementById("eventsList") as HTMLUListElement;
-// const video = document.getElementById("heroMovie") as HTMLIFrameElement;
+const video = document.getElementById("heroMovie") as HTMLIFrameElement;
 // const close = document.getElementById("closeBanner") as HTMLButtonElement;
 // const banner = document.getElementById("banner") as HTMLDivElement;
 const form = document.getElementById("joinUsForm") as HTMLFormElement;
 const emailInput = document.getElementById("joinUsInput") as HTMLInputElement;
-const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
+// const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
 
 
 function createEvent(image, title, description) {
@@ -66,25 +66,25 @@ new Splide(".community-slide", {
 }).mount( { AutoScroll } );
 
 
-// document.addEventListener('fullscreenchange', onFullScreenChange, {passive: true});
-// document.addEventListener('webkitfullscreenchange', onFullScreenChange, {passive: true});
-// document.addEventListener('mozfullscreenchange', onFullScreenChange, {passive: true});
+document.addEventListener('fullscreenchange', onFullScreenChange, {passive: true});
+document.addEventListener('webkitfullscreenchange', onFullScreenChange, {passive: true});
+document.addEventListener('mozfullscreenchange', onFullScreenChange, {passive: true});
 
-// function onFullScreenChange() {
-//     // @ts-ignore
-//     if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement)
-//         video.classList.add("scale-down");
-// }
+function onFullScreenChange() {
+    // @ts-ignore
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement)
+        video.classList.add("scale-down");
+}
 
-// document.getElementById("playButton").addEventListener("click", async () => {
-//     video.classList.remove("scale-down");
-//     await video.requestFullscreen();
-// });
+document.getElementById("playButton").addEventListener("click", async () => {
+    video.classList.remove("scale-down");
+    await video.requestFullscreen();
+});
 
-// video.addEventListener("ended", () => {
-//     video.classList.add("scale-down");
-//     return document.exitFullscreen();
-// }, {passive: true});
+video.addEventListener("ended", () => {
+    video.classList.add("scale-down");
+    return document.exitFullscreen();
+}, {passive: true});
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
