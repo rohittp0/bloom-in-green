@@ -40,15 +40,11 @@
 
 @media screen and (max-width: 415px) {
   .gallery {
-    display: unset;
-    overflow-x: clip;
+    overflow-x: hidden;
+    padding-bottom: 2em;
 
     .grass-img {
-      object-fit: fill;
-      position: relative;
-      left: -21px;
-      width: 113%;
-      bottom: -37px;
+      display: none;
     }
 
     .column {
