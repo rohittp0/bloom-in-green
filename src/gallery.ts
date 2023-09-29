@@ -1,6 +1,6 @@
 const container = document.getElementById("galleryContainer") as HTMLDivElement;
 
-const srcBase = "https://rohittp.imgix.net/";
+const srcBase = "https://rohittp.imgix.net/gallery/";
 
 function getSrcSet(src: string): string {
     const sizes = [1440, 1024, 768, 410, 390, 375, 230];
