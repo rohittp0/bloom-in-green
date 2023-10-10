@@ -1,9 +1,10 @@
 @import "../../utils/menu";
 
 .hero {
-  background: url("https://rohittp.imgix.net/index/hero-placeholder.webp") no-repeat;
+  background: url("../img/hero.JPG") no-repeat;
   padding: 1em 0;
   position: relative;
+  background-size: cover;
 
   .hidden {
     bottom: -100px !important;
@@ -181,8 +182,9 @@
 
 @media screen and (max-width: 415px) {
   .hero {
-    background: url("https://rohittp.imgix.net/index/hero-placeholder-mobile.webp") no-repeat;
+    background: url("../img/hero-mobile.JPG") no-repeat;
     min-height: 100vh;
+    background-size: cover;
 
     .banner{
       font-size: 1rem;
