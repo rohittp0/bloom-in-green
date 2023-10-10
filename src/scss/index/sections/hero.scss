@@ -1,7 +1,7 @@
 @import "../../utils/menu";
 
 .hero {
-  background: url("../img/hero.JPG") no-repeat;
+  background: url("https://rohittp.imgix.net/index/hero/hero.JPG") no-repeat;
   padding: 1em 0;
   position: relative;
   background-size: cover;
@@ -195,7 +195,7 @@
 
 @media screen and (max-width: 415px) {
   .hero {
-    background: url("../img/hero-mobile.JPG") no-repeat;
+    background: url("https://rohittp.imgix.net/index/hero/hero-mobile.JPG?w=415&fit=max") no-repeat;
     min-height: 100vh;
     background-size: cover;
 
