@@ -22,7 +22,7 @@
 }
 
 section {
-  height: 100vh;
+  height: 110vh;
   position: relative;
   scroll-margin-top: -2rem;
   overflow-x: clip;
@@ -36,7 +36,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 160vh;
+  height: 100vh;
+  margin-bottom: 5vh;
 
   h2 {
     text-align: center;
@@ -47,6 +48,12 @@ h2 {
   .column {
     max-width: max(60vw, 1000px);
     margin: 0 1em;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: 1px;
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
 
     .row {
       display: flex;

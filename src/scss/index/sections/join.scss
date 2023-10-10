@@ -3,23 +3,24 @@
   position: relative;
   height: unset;
   min-height: 600px;
+  display: flex;
+  flex-direction: column;
+
 
   .center-white {
     text-align: center;
-    font: normal normal normal 50px/59px KonTikiJF Aloha, Sofia Pro, sans-serif;
+    font: normal normal normal 40px/50px KonTikiJF Aloha, Sofia Pro, sans-serif;
     letter-spacing: 0;
     color: #FFFFFF;
     padding: 1em 10%;
+    margin-top: 2rem;
 
-    &::after {
-      display: block;
-      font: normal normal bold 26px/40px sans-serif;
-      letter-spacing: 0;
-      text-align: right;
-
-      content: "- join our community";
-    }
   }
+  .button-div{
+    width: 207px;
+    margin: 0 auto;
+  }
+
 
   .image-background {
     filter: brightness(50%);
@@ -61,6 +62,7 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
+    margin-top: 2vh;
 
     img:hover {
       cursor: pointer;
