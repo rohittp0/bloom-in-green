@@ -14,6 +14,13 @@ module.exports = {
     },
     compress: true,
     port: 5000,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/about$/, to: '/about.html' },
+        { from: /^\/festival$/, to: '/festival.html' },
+        { from: /^\/gallery$/, to: '/gallery.html' },
+      ],
+    },
   },
   devtool: "inline-source-map",
   mode: "development"
