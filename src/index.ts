@@ -12,7 +12,6 @@ const form = document.getElementById("joinUsForm") as HTMLFormElement;
 const emailInput = document.getElementById("joinUsInput") as HTMLInputElement;
 // const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
 
-
 function createEvent(image, title, description) {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
@@ -108,3 +107,15 @@ form.addEventListener("submit", (e) => {
 
 
 // videoBg.onload = () => videoBg.play().catch((e) => console.error(e));
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value;
+
+    return fetch("https://api.apispreadsheets.com/data/FTtiYWAmU4xWNan8/", {
+        method: "POST",
+        body: JSON.stringify({email})
+    })
+        .then(() => swal("Joined", "Welcome aboard", "success"))
+        .catch(() => swal("Oops", "Something went wrong", "error"))
+})
