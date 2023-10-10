@@ -94,12 +94,12 @@
   .video-row {
     display: flex;
     justify-content: end;
-    margin: 3em 5em 3em 10em;
+   margin-right: 5em;
 
     button {
       border-radius: 50%;
-      width: 114px;
-      height: 114px;
+      width: 155px;
+      height: 155px;
       background-color: #2C5C4C;
       border: 8px solid #BCCD81;
       color: #FFFFFF;
@@ -220,8 +220,8 @@
       margin: 1rem 0 0 0;
 
       button {
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
         padding: 1em;
         font: normal normal normal 16px/20px KonTikiJF Aloha;
         border-width: 6px;
