@@ -11,6 +11,43 @@ const video = document.getElementById("heroMovie") as HTMLIFrameElement;
 const form = document.getElementById("joinUsForm") as HTMLFormElement;
 const emailInput = document.getElementById("joinUsInput") as HTMLInputElement;
 // const videoBg = document.getElementById("videoBg") as HTMLVideoElement;
+const div = document.getElementById("lineup");
+const root = lineUP.root
+
+//gallery
+const container_ind = document.getElementById("galleryContainer2") as HTMLDivElement;
+
+const srcBase_ind = "https://rohittp.imgix.net/gallery/";
+
+function getSrcSet(src: string): string {
+    const sizes = [1440, 1024, 768, 410, 390, 375, 230];
+    return sizes.map(size => `${src}?w=${size}&fit=max ${size}w`).join(", ");
+}
+
+function getImg(name: string): HTMLImageElement {
+    const img = document.createElement("img");
+    img.src = `${srcBase_ind}${name}`;
+    img.srcset = getSrcSet(`${srcBase_ind}${name}`);
+    img.alt = name;
+    img.height = 220;
+    return img;
+}
+
+const MAX_ROWS = 4;
+const MAX_COLS = 4;
+
+const MAX_IMAGES = 14;
+
+for(let i = 0; i < MAX_ROWS; i++) {
+    const row = document.createElement("div");
+    row.classList.add("row");
+
+    for(let j = 0; j < MAX_COLS; j++)
+        row.appendChild(getImg(`gal-img-${(i*MAX_ROWS+j) % MAX_IMAGES}.webp`));
+
+    container_ind.appendChild(row);
+}
+
 
 function createEvent(image, title, description) {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -27,13 +64,14 @@ function createEvent(image, title, description) {
     </li>`;
 }
 
-function generateRow(root, names, key) {
-    const title = key.toUpperCase().replaceAll("_", " ")
-    const images = names.map((name, i) => eventDetails.includes(name) ?
-        createEvent(`${root}/${key}/${i + 1}.webp`,name, title) : "");
 
-    return images.join("\n")
-}
+// function generateRow2(root, names, key) {
+//     const title = key.toUpperCase().replaceAll("_", " ")
+//     const images = names.map((name, i) => eventDetails.includes(name) ?
+//         createEvent(`${root}/${key}/${i + 1}.webp`,name, title) : "");
+//
+//     return images.join("\n")
+// }
 
 // const rowsHtml = Object.keys(lineUP.categories).map((key) =>
 //     generateRow(lineUP.root, lineUP.categories[key], key));
@@ -119,3 +157,7 @@ form.addEventListener("submit", (e) => {
         .then(() => swal("Joined", "Welcome aboard", "success"))
         .catch(() => swal("Oops", "Something went wrong", "error"))
 })
+
+
+export {};
+

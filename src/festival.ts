@@ -1,6 +1,6 @@
 import {lineUP} from "./utils/content";
 
-const div = document.getElementById("lineup");
+const div = document.getElementById("lineup2");
 const root = lineUP.root
 
 function getSrcset(path) {
@@ -14,7 +14,7 @@ function generateRow(root, names, key) {
     const title = key.toUpperCase().replaceAll("_", " ")
     const images = names.map((name, i) => `
         <div class="card-image">
-            <img src="${root}/${key}/${i + 1}.webp" srcset="${getSrcset(`${root}/${key}/${i + 1}.webp`)}" 
+            <img src="${root}/${key}/${i + 1}.webp" srcset="${getSrcset(`${root}/${key}/${i + 1}.webp`)}"
                 alt="${name}">
             <p>${name}</p>
         </div>

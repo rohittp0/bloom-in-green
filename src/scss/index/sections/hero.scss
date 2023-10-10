@@ -193,9 +193,109 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+.lineup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    text-align: center;
+    color: #1D4638;
+    margin: 1em 0 1.5em;
+    font: normal normal normal 42px/40px Sofia Pro;
+  }
+
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+
+    p {
+      font: normal normal normal 25px/59px Sofia Pro;
+      opacity: 0.8;
+      color: #1D4638;
+      margin: 0 1rem;
+      width: 95%;
+    }
+
+    .row {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      margin: 0.20rem 0;
+      padding-bottom: 0.5rem;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+
+      &::-webkit-scrollbar {
+        height: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #3CB189;
+        border-radius: 0.5rem;
+      }
+
+      &:hover {
+        padding-bottom: 0;
+        overflow-x: scroll;
+      }
+
+      .card-image {
+        scroll-snap-align: center;
+        margin-right: 2em;
+        border-radius: 0.4em;
+        position: relative;
+
+        img {
+          border-radius: 0.4em;
+          width: 250px;
+          aspect-ratio: 1;
+        }
+
+        p {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 1.7rem;
+          left: 20px;
+          max-width: calc(250px - (20px * 2));
+
+          font-size: 1rem;
+          color: #FFFFFF;
+          font-weight: bold;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+      @media screen and (max-width: 415px) {
+  .lineup {
+    .column {
+      .row {
+        .card-image {
+          padding: 0;
+          margin: 0;
+
+          img {
+            width: 100vw;
+          }
+
+          p {
+            max-width: calc(100vw - (20px * 2));
+          }
+        }
+      }
+    }
+  }
+
   .hero {
-    background: url("https://rohittp.imgix.net/index/hero/hero-mobile.JPG?w=415&fit=max") no-repeat;
+    background: url("../img/hero.JPG") no-repeat;
     min-height: 100vh;
     background-size: cover;
 
@@ -209,7 +309,7 @@
 
         img {
           width: 71%;
-          margin-top: 21%;
+          margin-top: 36%;
           margin-bottom: 0.5em;
         }
       }
