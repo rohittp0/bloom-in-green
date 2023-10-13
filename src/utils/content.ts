@@ -11,14 +11,13 @@ export const eventDetails = [
 ];
 
 const artists = [
-    "Taba Chake",
-    "Easy Wanderlings",
-    "Frizzell Dsouza",
-    "Jatayu",
-    "Bonny Abraham Ensemble",
-    "Shanka Tribe",
-    "Ysquar3",
-    "Weird Sounding Dude"
+    "Carbon",
+    "Kaya Project",
+    "Nirvaan",
+    "Pettra",
+    "PREM JOSHUA",
+    "SHRII",
+    "SITARSONIC",
 ]
 
 const workshops = [
@@ -54,7 +53,7 @@ export const lineUP = {
     root: "https://rohittp.imgix.net/festival/lineup",
     categories: {
         artists,
-        workshops,
-        community_sessions
+        // workshops,
+        // community_sessions
     }
 };
