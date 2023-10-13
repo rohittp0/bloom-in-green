@@ -3,7 +3,7 @@ import {lineUP} from "./utils/content";
 const div = document.getElementById("lineup2");
 const root = lineUP.root
 
-function getSrcset(path) {
+function getSrcsetf(path) {
     const sizes = [415, 375, 390, 300, 260, 230];
 
     return sizes.map((w) => `${path}?w=${w}&fit=max ${w}w`).join(", ");
@@ -14,7 +14,7 @@ function generateRow(root, names, key) {
     const title = key.toUpperCase().replaceAll("_", " ")
     const images = names.map((name, i) => `
         <div class="card-image">
-            <img src="${root}/${key}/${i + 10}.webp" srcset="${getSrcset(`${root}/${key}/${i + 10}.webp`)}"
+            <img src="${root}/${key}/${i + 10}.webp" srcset="${getSrcsetf(`${root}/${key}/${i + 10}.webp`)}"
                 alt="${name}">
             <p>${name}</p>
         </div>

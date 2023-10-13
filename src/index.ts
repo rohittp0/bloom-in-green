@@ -18,62 +18,64 @@ const root = lineUP.root
 const container_ind = document.getElementById("galleryContainer2") as HTMLDivElement;
 const srcBase_ind = "https://rohittp.imgix.net/gallery/";
 
+// //lineup
+// function getSrcset(path) {
+//     const sizes = [415, 375, 390, 300, 260, 230];
+//
+//     return sizes.map((w) => `${path}?w=${w}&fit=max ${w}w`).join(", ");
+// }
+//
+//
+// function generateRow(root, names, key) {
+//     const title = key.toUpperCase().replaceAll("_", " ")
+//     const images = names.map((name, i) => `
+//         <div class="card-image">
+//             <img src="${root}/${key}/${i + 10}.webp" srcset="${getSrcset(`${root}/${key}/${i + 10}.webp`)}"
+//                 alt="${name}">
+//             <p>${name}</p>
+//         </div>
+//     `);
+//
+//     return `
+//         <div class="column">
+//             <p>${title}</p>
+//             <div class="row">
+//                 ${images.join("")}
+//             </div>
+//         </div>
+//     `
+// }
+//
+// const rowsHtml = Object.keys(lineUP.categories).map((key) =>
+//     generateRow(root, lineUP.categories[key], key));
+//
+// div.innerHTML = div.innerHTML.replace("<span data-id=\"image-grid\"></span>", rowsHtml.join(""));
+//
+// const scrollStep = 10, slideTime = 2000;
+// const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+//
+// document.querySelectorAll('.row').forEach((row) => {
+//     const inter = setInterval(async () => {
+//         if (row.scrollLeft >= row.scrollWidth)
+//             return clearInterval(inter);
+//
+//         const max = row.scrollLeft + (window.innerWidth > 415 ? 250 : window.innerWidth);
+//
+//         for (let i = row.scrollLeft; i <= max+1; i+= scrollStep) {
+//             row.scrollTo(i, 0);
+//             await sleep(slideTime / max);
+//         }
+//
+//         row.scrollTo(max, 0);
+//
+//     }, slideTime);
+//
+//     row.addEventListener("click", () => clearInterval(inter));
+// });
 
-function getSrcset(path) {
-    const sizes = [415, 375, 390, 300, 260, 230];
 
-    return sizes.map((w) => `${path}?w=${w}&fit=max ${w}w`).join(", ");
-}
-
-
-function generateRow(root, names, key) {
-    const title = key.toUpperCase().replaceAll("_", " ")
-    const images = names.map((name, i) => `
-        <div class="card-image">
-            <img src="${root}/${key}/${i + 10}.webp" srcset="${getSrcset(`${root}/${key}/${i + 10}.webp`)}"
-                alt="${name}">
-            <p>${name}</p>
-        </div>
-    `);
-
-    return `
-        <div class="column">
-            <p>${title}</p>
-            <div class="row">
-                ${images.join("")}
-            </div>
-        </div>
-    `
-}
-
-const rowsHtml = Object.keys(lineUP.categories).map((key) =>
-    generateRow(root, lineUP.categories[key], key));
-
-div.innerHTML = div.innerHTML.replace("<span data-id=\"image-grid\"></span>", rowsHtml.join(""));
-
-const scrollStep = 10, slideTime = 2000;
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-
-document.querySelectorAll('.row').forEach((row) => {
-    const inter = setInterval(async () => {
-        if (row.scrollLeft >= row.scrollWidth)
-            return clearInterval(inter);
-
-        const max = row.scrollLeft + (window.innerWidth > 415 ? 250 : window.innerWidth);
-
-        for (let i = row.scrollLeft; i <= max+1; i+= scrollStep) {
-            row.scrollTo(i, 0);
-            await sleep(slideTime / max);
-        }
-
-        row.scrollTo(max, 0);
-
-    }, slideTime);
-
-    row.addEventListener("click", () => clearInterval(inter));
-});
-
-function getSrcSet(src: string): string {
+//gallery
+function getSrcSetg(src: string): string {
     const sizes = [1440, 1024, 768, 410, 390, 375, 230];
     return sizes.map(size => `${src}?w=${size}&fit=max ${size}w`).join(", ");
 }
@@ -81,7 +83,7 @@ function getSrcSet(src: string): string {
 function getImg(name: string): HTMLImageElement {
     const img = document.createElement("img");
     img.src = `${srcBase_ind}${name}`;
-    img.srcset = getSrcSet(`${srcBase_ind}${name}`);
+    img.srcset = getSrcSetg(`${srcBase_ind}${name}`);
     img.alt = name;
     img.height = 220;
     return img;
@@ -102,6 +104,8 @@ for(let i = 0; i < MAX_ROWS; i++) {
     container_ind.appendChild(row);
 }
 
+
+//gallery_end
 
 function createEvent(image, title, description) {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
